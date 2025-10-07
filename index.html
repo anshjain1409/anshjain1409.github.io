@@ -1,0 +1,1186 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansh Jain | Data & Business Analyst</title>
+    <meta name="description" content="Portfolio of Ansh Jain, a skilled Data Analyst and Business Analyst specializing in SQL, Excel, Python, and Tableau.">
+    <meta name="author" content="Ansh Jain">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset and Global Styles */
+        :root {
+            --dark-navy: #1d1d1f;
+            --light-slate: #f5f5f7;
+            --slate: #a1a1a6;
+            --accent: #0071e3;
+            --accent-light-blue: #00aaff;
+            --accent-tint: rgba(0, 113, 227, 0.1);
+            --bg-light: #2a2a2e;
+            --font-main: 'Inter', sans-serif;
+            --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            --shadow-glow: 0 0 20px rgba(0, 113, 227, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-navy);
+            color: var(--slate);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-navy);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--slate);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        section {
+            padding: 100px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--light-slate);
+            font-weight: 600;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: clamp(24px, 5vw, 32px);
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 .emoji {
+            margin-right: 15px;
+            font-size: clamp(28px, 5vw, 36px);
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            position: relative;
+            top: 1px;
+            width: 100%;
+            max-width: 300px;
+            height: 1px;
+            margin-left: 20px;
+            background-color: var(--bg-light);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+        
+        .container {
+            padding: 0 5%;
+        }
+        
+        /* ---------------------------------------- */
+        /* Animation Classes */
+        /* ---------------------------------------- */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered animation delays */
+        .stagger-children > * {
+            transition-delay: var(--delay);
+        }
+
+        /* ---------------------------------------- */
+        /* Header / Navigation */
+        /* ---------------------------------------- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            background-color: rgba(29, 29, 31, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 100;
+            transition: top 0.3s ease-out;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .main-nav li {
+            margin-left: 25px;
+        }
+
+        .main-nav a {
+            color: var(--light-slate);
+            font-size: 0.9rem;
+        }
+        .main-nav a:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        /* ---------------------------------------- */
+        /* Hero Section */
+        /* ---------------------------------------- */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 0;
+        }
+        
+        #hero h1 {
+            font-size: clamp(40px, 8vw, 80px);
+            margin: 0;
+            font-weight: 700;
+        }
+
+        #hero h2 {
+            font-size: clamp(30px, 6vw, 60px);
+            color: var(--slate);
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        #hero h2::after { display: none; }
+
+        #hero p {
+            max-width: 540px;
+            margin-top: 20px;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+        }
+
+        .cta-buttons {
+            margin-top: 40px;
+        }
+        
+        .btn-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            color: var(--accent);
+            background-color: transparent;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: var(--accent-tint);
+            text-decoration: none;
+            box-shadow: 0 0 15px var(--accent-tint);
+        }
+        
+        .btn-wrapper:hover .open-now,
+        .project-card:hover .open-now {
+            opacity: 1;
+            transform: translate(-50%, -5px) scale(1);
+            visibility: visible;
+        }
+
+        .open-now {
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%) scale(0.8);
+            background-color: var(--accent);
+            color: var(--light-slate);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .open-now::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--accent) transparent transparent transparent;
+        }
+        
+        /* ---------------------------------------- */
+        /* About Section */
+        /* ---------------------------------------- */
+        #about p {
+            max-width: 700px;
+            margin-bottom: 1rem;
+        }
+
+        /* ---------------------------------------- */
+        /* Skills & Expertise Section */
+        /* ---------------------------------------- */
+        .skills-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            font-size: 1.1rem;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .expertise-block {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .expertise-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .expertise-header svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent);
+            margin-right: 15px;
+        }
+
+        .expertise-header h3 {
+            font-size: 1.2rem;
+            color: var(--light-slate);
+        }
+
+        .expertise-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .expertise-block li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .expertise-block li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* ---------------------------------------- */
+        /* Experience Section */
+        /* ---------------------------------------- */
+        .experience-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .experience-card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 30px;
+            border-left: 4px solid var(--accent-light-blue);
+            transition: var(--transition);
+        }
+        
+        .experience-card:hover {
+             box-shadow: 0 10px 30px -15px rgba(0,0,0,0.7);
+             transform: translateY(-5px);
+        }
+        
+        .experience-card h3 {
+            font-size: 1.4rem;
+            color: var(--light-slate);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .experience-card h3 svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            stroke: var(--accent-light-blue);
+        }
+
+        .experience-card .company {
+            color: var(--accent-light-blue);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .experience-card .date {
+            font-size: 0.9rem;
+            color: var(--slate);
+            margin: 5px 0 20px 0;
+            display: block;
+        }
+
+        .experience-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .experience-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .experience-card li::before {
+            content: '▹';
+            position: absolute;
+            left: 0px;
+            color: var(--accent);
+        }
+
+        /* ---------------------------------------- */
+        /* Projects Section */
+        /* ---------------------------------------- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            overflow: visible;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-height: 280px;
+            text-decoration: none;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7), var(--shadow-glow);
+        }
+
+        .card-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            color: var(--light-slate);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .project-card h3 svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            stroke: var(--light-slate);
+        }
+
+        .project-impact {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--accent-light-blue);
+            margin-bottom: auto;
+        }
+
+        .project-details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin-top 0.5s ease-in-out;
+            margin-top: 0;
+        }
+
+        .project-card:hover .project-details {
+            max-height: 500px; /* Allow space for content */
+            opacity: 1;
+            margin-top: 15px;
+        }
+        
+        .project-details p {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: var(--slate);
+        }
+
+        .project-tools {
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+            position: relative;
+            color: var(--slate);
+            margin-top: 15px;
+        }
+        .project-tools strong { color: var(--light-slate); }
+        
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 8px 12px;
+            position: absolute;
+            z-index: 5;
+            bottom: 130%;
+            left: 50%;
+            margin-left: -125px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* ---------------------------------------- */
+        /* Project Methodology Section */
+        /* ---------------------------------------- */
+        #methodology {
+            text-align: center;
+        }
+        .methodology-card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .methodology-card h2 {
+            justify-content: center;
+        }
+        .methodology-card h2::after {
+            display: none;
+        }
+        .methodology-card p {
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+        }
+        .methodology-footer {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .methodology-point {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--light-slate);
+        }
+        .methodology-point::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .methodology-point.data-driven::before { background-color: #0071e3; }
+        .methodology-point.measurable-impact::before { background-color: #34c759; }
+        .methodology-point.strategic-rec::before { background-color: #af52de; }
+
+        /* ---------------------------------------- */
+        /* Certifications Section */
+        /* ---------------------------------------- */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .cert-card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 25px;
+            transition: var(--transition);
+        }
+        
+        .cert-card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0 8px 25px -10px rgba(0,0,0,0.5), var(--shadow-glow);
+        }
+
+        .cert-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--slate);
+        }
+        
+        .cert-header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            border-radius: 4px;
+        }
+        
+        .cert-header h3 {
+            font-size: 1.3rem;
+            color: var(--light-slate);
+        }
+
+        .cert-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cert-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .cert-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* ---------------------------------------- */
+        /* Contact Section */
+        /* ---------------------------------------- */
+        #contact {
+            text-align: center;
+        }
+        #contact h2 {
+            justify-content: center;
+        }
+        #contact h2::after { display: none; }
+        
+        #contact p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .contact-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .contact-links li {
+            margin: 10px 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+        .social-links li {
+            margin: 0 15px;
+        }
+        .social-links a svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--slate);
+            transition: var(--transition);
+        }
+        .social-links a:hover svg {
+            fill: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        /* ---------------------------------------- */
+        /* Footer */
+        /* ---------------------------------------- */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: var(--slate);
+        }
+        .footer p {
+            margin-bottom: 15px;
+        }
+
+
+        /* ---------------------------------------- */
+        /* Responsive Design */
+        /* ---------------------------------------- */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0; /* Reduced padding for tablets */
+            }
+            
+            .container {
+                padding: 0 10%;
+            }
+
+            h2::after {
+                max-width: 150px;
+            }
+
+            .main-nav {
+                position: fixed;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                width: 60%;
+                background-color: var(--bg-light);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .main-nav.active {
+                transform: translateX(0);
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .main-nav li {
+                margin: 20px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.toggle .line1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            .hamburger.toggle .line2 {
+                opacity: 0;
+            }
+            .hamburger.toggle .line3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            
+            #hero {
+                min-height: auto; /* Removed 100vh for better mobile experience */
+                padding: 140px 0 100px 0; /* Adjusted padding for mobile hero */
+                text-align: center;
+            }
+
+            #hero h1 { font-size: 40px; }
+            #hero h2 { font-size: 30px; justify-content: center;}
+            #hero p { margin-left: auto; margin-right: auto;}
+            
+            .projects-grid, .certifications-grid, .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 5%;
+            }
+            
+            section {
+                padding: 50px 0; /* Further reduced padding for phones */
+            }
+
+            .cta-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+            }
+             .btn-wrapper {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+             .btn-wrapper:last-child {
+                margin-bottom: 0;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style></head><body>
+
+    <header class="header">
+        <div class="logo"><a href="#">AJ</a></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="hero">
+            <h1 class="reveal-on-scroll">Ansh Jain</h1>
+            <h2 class="reveal-on-scroll" style="--delay: 100ms">Data Analyst | Turning data into decisions</h2>
+            <p class="reveal-on-scroll" style="--delay: 200ms">I excel at translating ambiguous business questions into clear analyses and measurable impact.</p>
+            <div class="cta-buttons reveal-on-scroll" style="--delay: 300ms">
+                <div class="btn-wrapper">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <div class="open-now">See Projects!</div>
+                </div>
+                 <div class="btn-wrapper">
+                    <a href="https://drive.google.com/file/d/14luddQk7UqemETC5hq_OjOT6fS4Wu4mB/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Resume</a>
+                     <div class="open-now">Open Now!</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="reveal-on-scroll"><span class="emoji">👋</span>About Me</h2>
+            <p class="reveal-on-scroll">I am a detail-oriented and disciplined Business Analyst with a strong foundation in SQL, Excel, Python, and Tableau. My experience spans KPI tracking, dashboard development, and structured problem-solving, particularly within the tech and e-commerce sectors. I thrive on translating ambiguous business questions into clear, actionable analyses that drive measurable impact.</p>
+            <p class="reveal-on-scroll">Driven by a consistent and diligent approach, I am passionate about process optimization and am always eager to tackle new challenges for skill growth, with a long-term interest in evolving into Product Management. My goal is to work in an environment where I can make a tangible difference, leveraging data to inform strategy and improve outcomes.</p>
+        </section>
+
+        <section id="skills">
+            <h2 class="reveal-on-scroll"><span class="emoji">🛠️</span>Skills & Expertise</h2>
+            <p class="skills-intro reveal-on-scroll">A comprehensive toolkit for transforming data into strategic business insights.</p>
+            <div class="expertise-grid stagger-children">
+                <div class="expertise-block reveal-on-scroll" style="--delay: 0ms;">
+                    <div class="expertise-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <h3>Business Analysis</h3>
+                    </div>
+                    <ul>
+                        <li>Requirement Gathering</li>
+                        <li>Process Optimization</li>
+                        <li>KPI Tracking</li>
+                        <li>Risk Analysis</li>
+                        <li>Financial Modeling</li>
+                    </ul>
+                </div>
+                <div class="expertise-block reveal-on-scroll" style="--delay: 150ms;">
+                    <div class="expertise-header">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20V16"/></svg>
+                        <h3>Data Analysis</h3>
+                    </div>
+                     <ul>
+                        <li>Tableau</li>
+                        <li>MS Excel</li>
+                        <li>Power BI</li>
+                        <li>Matplotlib & Seaborn</li>
+                        <li>Statistical Analysis</li>
+                    </ul>
+                </div>
+                <div class="expertise-block reveal-on-scroll" style="--delay: 300ms;">
+                    <div class="expertise-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <h3>Programming</h3>
+                    </div>
+                     <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>MySQL</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2 class="reveal-on-scroll"><span class="emoji">💼</span>Professional Experience</h2>
+            <div class="experience-cards stagger-children">
+                <div class="experience-card reveal-on-scroll" style="--delay: 0ms;">
+                    <h3>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        Data Analyst Fellow
+                    </h3>
+                    <p class="company">NextLeap Data Analyst Fellowship | India (Online)</p>
+                    <span class="date">May 2025 – Aug 2025</span>
+                    <ul>
+                        <li>Leveraged <b>Excel, SQL, Tableau,</b> and <b>Python</b> to solve real-world business cases and complete over 100 problem sets.</li>
+                        <li>Participated in a rigorous, case-based curriculum to master the entire data analytics workflow from data preparation to visualization.</li>
+                        <li>Engaged in weekly 1:1 mentor sessions with industry experts for personalized feedback on assignments and projects.</li>
+                    </ul>
+                </div>
+                <div class="experience-card reveal-on-scroll" style="--delay: 150ms;">
+                    <h3>
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        Financial Analyst Intern
+                    </h3>
+                    <p class="company">Margin Sentiment Advisory Pvt. Ltd. | Bengaluru, India (Remote)</p>
+                    <span class="date">Jul 2025 – Sep 2025</span>
+                    <ul>
+                        <li>Analyzed historical data to operationalize structured short-selling strategies and surfaced high-confidence candidates.</li>
+                        <li>Designed risk–reward and scenario analysis frameworks that reduced execution errors and improved decision accuracy by 35%.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="reveal-on-scroll"><span class="emoji">🚀</span>My Projects</h2>
+            <div class="projects-grid stagger-children">
+                
+                <a href="https://github.com/anshjain1409/uber-revenue-optimization" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 0ms;">
+                    <div class="open-now">Open on GitHub!</div>
+                    <div class="card-content">
+                        <div>
+                           <h3>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2v-5h-4v-7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5.64"/><path d="M16 17l-1.5-1.5M19 14l1.5 1.5M14 17h5"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg>
+                               Uber Revenue Optimization Analysis
+                           </h3>
+                            <p class="project-impact">Increased revenue understanding on 10M+ trips, leading to 5 strategic recommendations.</p> 
+                           <div class="project-details">
+                                <p><b>Objective:</b> Identify key factors influencing Revenue per Trip to improve Uber's profitability. Revealed that airport trips and credit card payments drive 40%+ higher revenue.</p>
+                           </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Python, SQL, Tableau
+                            <span class="tooltiptext">Analyzed 10M+ trip records using Python and SQL; visualized trends via interactive Tableau dashboards.</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/anshjain1409/Tableau-Dashboard-for-Swiggy" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 150ms;">
+                    <div class="open-now">Open on GitHub!</div>
+                    <div class="card-content">
+                        <div>
+                           <h3>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8a6 6 0 0 0-8.4 0L4 18"/><path d="M12 18h6"/></svg>
+                               Swiggy Web Traffic & Conversion Analysis
+                           </h3>
+                            <p class="project-impact">Built dashboards for 250K+ sessions, improving conversion efficiency by 25%.</p> 
+                           <div class="project-details">
+                                <p><b>Approach:</b> Engineered interactive Tableau dashboards to visualize the entire user journey, leveraging SQL to query and segment over 250,000 user sessions to pinpoint key friction points and strategic opportunities.</p>
+                           </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Tableau, SQL
+                            <span class="tooltiptext">Tableau was used for interactive dashboarding and SQL for querying the session data from the database.</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/anshjain1409/amazon-brazil-sql-analysis" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 300ms;">
+                    <div class="open-now">Open on GitHub!</div>
+                    <div class="card-content">
+                        <div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                Amazon Brazil Market Analysis for Indian Entry
+                            </h3>
+                            <p class="project-impact">Queried 1M+ transactions, recommending plays projected to lift sales by 18%.</p>
+                            <div class="project-details">
+                               <p><b>Methodology:</b> Executed complex SQL queries across a 1M+ transaction dataset to analyze sales velocity and regional demand. Delivered a data-driven market entry strategy, identifying niche categories projected to lift initial sales by 18%.</p>
+                           </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;MySQL, Tableau
+                            <span class="tooltiptext">MySQL was used to query over 1 million transaction records, and Tableau was used to visualize market trends and product opportunities.</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/anshjain1409/Flipkart-customer-retention-analysis" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 450ms;">
+                     <div class="open-now">Open on GitHub!</div>
+                    <div class="card-content">
+                        <div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                                Flipkart Customer Service Optimization
+                            </h3>
+                            <p class="project-impact">Performed RCA on 100K+ service tickets, projecting to raise CSAT by 15% and reduce complaints by 25%.</p>
+                            <div class="project-details">
+                                <p><b>Impact:</b> Conducted a comprehensive Root Cause Analysis (RCA) on 100K+ service tickets, clustering issues to identify systemic problems. Formulated optimization recommendations projected to boost CSAT by 15%.</p>
+                           </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Excel, SQL
+                            <span class="tooltiptext">Advanced Excel functions and SQL queries were used to segment and analyze over 100,000 customer service tickets for root cause analysis.</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="https://github.com/anshjain1409/Economic-Pulse---Sentiment-Analysis" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 600ms;">
+                     <div class="open-now">Open on GitHub!</div>
+                    <div class="card-content">
+                        <div>
+                           <h3>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                               Sentiment Analysis of Economic Conditions
+                           </h3>
+                            <p class="project-impact">Built a pipeline to process 1,500+ financial headlines, providing early sentiment signals.</p> 
+                            <div class="project-details">
+                                <p><b>Problem Statement:</b> Engineered an end-to-end NLP pipeline using Python to automate the analysis of financial news, providing early, quantified sentiment signals for economic forecasting and mitigating the lack of real-time market insight.</p>
+                           </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Python, NLTK, BeautifulSoup, Selenium, Pandas, Matplotlib
+                            <span class="tooltiptext">This project used a Python stack: BeautifulSoup/Selenium for web scraping, NLTK/Vader for sentiment analysis, and Pandas/Matplotlib for data handling and visualization.</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <section id="methodology">
+            <div class="methodology-card reveal-on-scroll">
+                <h2>Project Methodology</h2>
+                <p>Each project follows a structured approach: data collection and validation, exploratory analysis, hypothesis formation, statistical testing, insight generation, and actionable recommendation development. Focus on translating complex findings into clear business value.</p>
+                <div class="methodology-footer">
+                    <span class="methodology-point data-driven">Data-Driven Insights</span>
+                    <span class="methodology-point measurable-impact">Measurable Impact</span>
+                    <span class="methodology-point strategic-rec">Strategic Recommendations</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2 class="reveal-on-scroll"><span class="emoji">🏅</span>Certifications</h2>
+            <div class="certifications-grid stagger-children">
+                <div class="cert-card reveal-on-scroll" style="--delay: 0ms;">
+                    <div class="cert-header">
+                        <img src="https://placehold.co/40x40/0071e3/f5f5f7?text=C" alt="Coursera Logo">
+                        <h3>Coursera</h3>
+                    </div>
+                    <ul>
+                        <li>Marketing Analytics: Know Your Customers (Macquarie University)</li>
+                        <li>Content, Advertising & Social IMC (Northwestern University)</li>
+                        <li>Start Writing Prompts like a Pro (Google)</li>
+                    </ul>
+                </div>
+                <div class="cert-card reveal-on-scroll" style="--delay: 150ms;">
+                     <div class="cert-header">
+                        <img src="https://placehold.co/40x40/2a2a2e/f5f5f7?text=HR" alt="HackerRank Logo">
+                        <h3>HackerRank</h3>
+                    </div>
+                    <ul>
+                        <li>SQL (Basic)</li>
+                        <li>SQL (Intermediate)</li>
+                    </ul>
+                </div>
+                <div class="cert-card reveal-on-scroll" style="--delay: 300ms;">
+                     <div class="cert-header">
+                        <img src="https://placehold.co/40x40/4caf50/f5f5f7?text=O" alt="Outskill Logo">
+                        <h3>Outskill</h3>
+                    </div>
+                    <ul>
+                        <li>Generative AI Mastermind</li>
+                    </ul>
+                </div>
+                <div class="cert-card reveal-on-scroll" style="--delay: 450ms;">
+                     <div class="cert-header">
+                        <img src="https://placehold.co/40x40/8A2BE2/f5f5f7?text=NL" alt="NextLeap Logo">
+                        <h3>NextLeap</h3>
+                    </div>
+                    <ul>
+                        <li>Data Analysis using Excel</li>
+                        <li>Data Analysis using SQL</li>
+                        <li>Tableau Dashboard for Swiggy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="reveal-on-scroll"><span class="emoji">💬</span>Get In Touch</h2>
+            <p class="reveal-on-scroll">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!</p>
+            <ul class="contact-links reveal-on-scroll">
+                <li><a href="mailto:anshjain14092004@gmail.com">anshjain14092004@gmail.com</a></li>
+                <li><a href="tel:+917017732268">+91 70177 32268</a></li>
+                <li>Bhubaneswar, India</li>
+            </ul>
+            <ul class="social-links reveal-on-scroll">
+                <li>
+                    <a href="https://www.linkedin.com/in/anshjain2u/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75 .79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/anshjain1409?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://drive.google.com/file/d/14luddQk7UqemETC5hq_OjOT6fS4Wu4mB/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M9 1.5H6.75A2.25 2.25 0 004.5 3.75v16.5A2.25 2.25 0 006.75 22.5h10.5A2.25 2.25 0 0019.5 20.25V8.25L15 1.5H9zm-1.5 3a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zm.75 4.5a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" fill="#a1a1a6" /></svg>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Designed & Built by Ansh Jain &copy; <span id="year"></span></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Hamburger Menu Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.main-nav');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('toggle');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.main-nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('toggle');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // On-Scroll Animations for reveal-on-scroll elements
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Apply the 'visible' class to trigger the animation
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // Animate when 10% of the element is visible
+            });
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Dynamic Year in Footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Sticky Header hide/show on scroll
+            let lastScrollTop = 0;
+            const header = document.querySelector('.header');
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop && scrollTop > 80) { // Hides only after scrolling a bit
+                    // Downscroll
+                    header.style.top = '-80px';
+                } else {
+                    // Upscroll
+                    header.style.top = '0';
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+            }, false);
+
+        });
+    </script></body></html>
+
