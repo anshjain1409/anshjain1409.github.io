@@ -1177,28 +1177,46 @@
         <section id="certifications">
             <h2 class="reveal-on-scroll"><span class="emoji">🏅</span>Certifications</h2>
             <div class="certifications-grid stagger-children">
+                <!-- === UPDATED: NextLeap Card (Moved to top) === -->
                 <div class="cert-card reveal-on-scroll" style="--delay: 0ms;">
+                     <div class="cert-header">
+                        <img src="https://placehold.co/40x40/8A2BE2/f5f5f7?text=NL" alt="NextLeap Logo">
+                        <h3>NextLeap</h3>
+                    </div>
+                    <ul>
+                        <li>Top Fellow (Top 10% of cohort)</li>
+                    </ul>
+                </div>
+                <!-- === END OF UPDATE === -->
+                
+                <div class="cert-card reveal-on-scroll" style="--delay: 150ms;">
                     <div class="cert-header">
                         <img src="https://placehold.co/40x40/0071e3/f5f5f7?text=C" alt="Coursera Logo">
                         <h3>Coursera</h3>
                     </div>
                     <ul>
+                        <!-- === UPDATED: Reordered list === -->
+                        <li>Start Writing Prompts like a Pro (Google)</li>
                         <li>Marketing Analytics: Know Your Customers (Macquarie University)</li>
                         <li>Content, Advertising & Social IMC (Northwestern University)</li>
-                        <li>Start Writing Prompts like a Pro (Google)</li>
                     </ul>
                 </div>
-                <div class="cert-card reveal-on-scroll" style="--delay: 150ms;">
+                
+                <!-- === UPDATED: HackerRank Card === -->
+                <div class="cert-card reveal-on-scroll" style="--delay: 300ms;">
                      <div class="cert-header">
-                        <img src="https://placehold.co/40x40/2a2a2e/f5f5f7?text=HR" alt="HackerRank Logo">
-                        <h3>HackerRank</h3>
+                        <img src="https://placehold.co/40x40/2a2a2e/f5f5f7?text=H" alt="HackerRank Logo">
+                        <h3>HackerRank & LeetCode</h3>
                     </div>
                     <ul>
-                        <li>SQL (Basic)</li>
                         <li>SQL (Intermediate)</li>
+                        <li>SQL (Basic)</li>
+                        <li>Top 50 SQL Questions (LeetCode)</li>
                     </ul>
                 </div>
-                <div class="cert-card reveal-on-scroll" style="--delay: 300ms;">
+                <!-- === END OF UPDATE === -->
+                
+                <div class="cert-card reveal-on-scroll" style="--delay: 450ms;">
                      <div class="cert-header">
                         <img src="https://placehold.co/40x40/4caf50/f5f5f7?text=O" alt="Outskill Logo">
                         <h3>Outskill</h3>
@@ -1207,17 +1225,6 @@
                         <li>Generative AI Mastermind</li>
                     </ul>
                 </div>
-                <!-- === UPDATED NEXTLEAP CARD === -->
-                <div class="cert-card reveal-on-scroll" style="--delay: 450ms;">
-                     <div class="cert-header">
-                        <img src="https://placehold.co/40x40/8A2BE2/f5f5f7?text=NL" alt="NextLeap Logo">
-                        <h3>NextLeap</h3>
-                    </div>
-                    <ul>
-                        <li>Top Fellow (Top 10-15% of cohort)</li>
-                    </ul>
-                </div>
-                <!-- === END OF UPDATE === -->
             </div>
         </section>
 
@@ -1258,6 +1265,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             
+            // === ADDED: Force scroll to top on load ===
+            window.scrollTo(0, 0);
+
             // Hamburger Menu Toggle
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.main-nav');
@@ -1312,4 +1322,5 @@
 
         });
     </script></body></html>
+
 
