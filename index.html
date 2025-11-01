@@ -1,8 +1,10 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ansh Jain | Data & Business Analyst</title>
-    <meta name="description" content="Portfolio of Ansh Jain, a skilled Data Analyst and Business Analyst specializing in SQL, Excel, Python, and Tableau.">
+    <!-- Changed Title -->
+    <title>Ansh Jain | Data Analyst Portfolio</title>
+    <!-- Changed Meta Description -->
+    <meta name="description" content="Portfolio of Ansh Jain, a skilled Data Analyst specializing in SQL, Excel, Python, and Tableau, turning data into actionable insights.">
     <meta name="author" content="Ansh Jain">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,16 +14,20 @@
     <style>
         /* CSS Reset and Global Styles */
         :root {
-            --dark-navy: #1d1d1f;
-            --light-slate: #f5f5f7;
-            --slate: #a1a1a6;
+            /* === LIGHT THEME === */
+            --dark-navy: #f5f5f7; /* Light Gray Background */
+            --light-slate: #1d1d1f; /* Dark Text */
+            --slate: #5a5a5f; /* Medium-Dark Text */
             --accent: #0071e3;
             --accent-light-blue: #00aaff;
             --accent-tint: rgba(0, 113, 227, 0.1);
-            --bg-light: #2a2a2e;
+            --bg-light: #ffffff; /* White Card Background */
+            --border-light: #e1e1e6;
             --font-main: 'Inter', sans-serif;
             --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-            --shadow-glow: 0 0 20px rgba(0, 113, 227, 0.2);
+            --shadow-glow: 0 0 20px rgba(0, 113, 227, 0.1);
+            --shadow-card: 0 4px 12px rgba(0,0,0,0.05);
+            --shadow-card-hover: 0 8px 20px rgba(0,0,0,0.08);
         }
 
         * {
@@ -49,11 +55,11 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: var(--dark-navy);
+            background: var(--dark-navy); /* Light background */
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--slate);
+            background: var(--slate); /* Medium-dark thumb */
             border-radius: 5px;
         }
 
@@ -68,9 +74,9 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-            color: var(--light-slate);
+            color: var(--light-slate); /* Dark text */
             font-weight: 600;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            /* text-shadow: 0 2px 10px rgba(0,0,0,0.3); Removed shadow for light theme */
         }
 
         h2 {
@@ -94,7 +100,7 @@
             max-width: 300px;
             height: 1px;
             margin-left: 20px;
-            background-color: var(--bg-light);
+            background-color: var(--border-light); /* Light border line */
         }
 
         a {
@@ -141,11 +147,12 @@
             top: 0;
             width: 100%;
             padding: 1rem 2rem;
-            background-color: rgba(29, 29, 31, 0.85);
+            background-color: rgba(245, 245, 247, 0.85); /* Light blurred background */
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             z-index: 100;
             transition: top 0.3s ease-out;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .logo a {
@@ -307,9 +314,15 @@
         }
 
         .expertise-block {
-            background-color: var(--bg-light);
+            background-color: var(--bg-light); /* White background */
             border-radius: 8px;
             padding: 25px;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+        .expertise-block:hover {
+            box-shadow: var(--shadow-card-hover);
+            transform: translateY(-4px);
         }
 
         .expertise-header {
@@ -358,15 +371,16 @@
         }
 
         .experience-card {
-            background-color: var(--bg-light);
+            background-color: var(--bg-light); /* White background */
             border-radius: 8px;
             padding: 30px;
             border-left: 4px solid var(--accent-light-blue);
             transition: var(--transition);
+            box-shadow: var(--shadow-card);
         }
         
         .experience-card:hover {
-             box-shadow: 0 10px 30px -15px rgba(0,0,0,0.7);
+             box-shadow: 0 10px 20px -10px rgba(0,0,0,0.1);
              transform: translateY(-5px);
         }
         
@@ -426,29 +440,62 @@
         }
 
         .project-card {
-            background-color: var(--bg-light);
+            background-color: var(--bg-light); /* White background */
             border-radius: 8px;
             overflow: visible;
             transition: var(--transition);
-            display: flex;
-            flex-direction: column;
+            /* display: flex; /* <-- No longer flex, just block */
+            /* flex-direction: column; */
             position: relative;
             min-height: 280px;
             text-decoration: none;
+            box-shadow: var(--shadow-card);
+            cursor: pointer; /* <-- ADDED */
         }
         
         .project-card:hover {
             transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7), var(--shadow-glow);
+            box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1), var(--shadow-glow);
         }
 
         .card-content {
             padding: 25px;
-            display: flex;
-            flex-direction: column;
+            display: flex; /* <-- MOVED flex here */
+            flex-direction: column; /* <-- MOVED flex here */
             justify-content: space-between;
             flex-grow: 1;
+            position: relative; /* Added for positioning GitHub button */
+            /* === ADDED to ensure card has height === */
+            height: 100%; 
+            min-height: 280px; /* Match card min-height */
         }
+
+        /* === REVISED GITHUB BUTTON STYLES === */
+        .github-btn-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 5;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .github-btn-wrapper svg {
+            display: block;
+            width: 22px;
+            height: 22px;
+            fill: var(--slate); /* Medium-dark icon */
+            transition: var(--transition);
+        }
+        
+        .github-btn-wrapper:hover svg {
+            fill: var(--accent); /* Blue on hover */
+            transform: scale(1.1);
+        }
+        /* === END GITHUB BUTTON STYLES === */
+
 
         .project-card h3 {
             font-size: 1.4rem;
@@ -456,6 +503,7 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+            padding-right: 30px; /* Add padding to avoid overlap with btn */
         }
         
         .project-card h3 svg {
@@ -511,7 +559,7 @@
         .tooltip .tooltiptext {
             visibility: hidden;
             width: 250px;
-            background-color: #333;
+            background-color: #333; /* Dark tooltip remains readable */
             color: #fff;
             text-align: left;
             border-radius: 6px;
@@ -548,11 +596,12 @@
             text-align: center;
         }
         .methodology-card {
-            background-color: var(--bg-light);
+            background-color: var(--bg-light); /* White background */
             border-radius: 8px;
             padding: 40px;
             max-width: 700px;
             margin: 0 auto;
+            box-shadow: var(--shadow-card);
         }
         .methodology-card h2 {
             justify-content: center;
@@ -598,15 +647,16 @@
         }
         
         .cert-card {
-            background-color: var(--bg-light);
+            background-color: var(--bg-light); /* White background */
             border-radius: 8px;
             padding: 25px;
             transition: var(--transition);
+            box-shadow: var(--shadow-card);
         }
         
         .cert-card:hover {
              transform: translateY(-5px);
-             box-shadow: 0 8px 25px -10px rgba(0,0,0,0.5), var(--shadow-glow);
+             box-shadow: var(--shadow-card-hover);
         }
 
         .cert-header {
@@ -614,7 +664,7 @@
             align-items: center;
             margin-bottom: 20px;
             padding-bottom: 15px;
-            border-bottom: 1px solid var(--slate);
+            border-bottom: 1px solid var(--border-light);
         }
         
         .cert-header img {
@@ -684,7 +734,7 @@
         .social-links a svg {
             width: 24px;
             height: 24px;
-            fill: var(--slate);
+            fill: var(--slate); /* Medium-dark icon fill */
             transition: var(--transition);
         }
         .social-links a:hover svg {
@@ -728,12 +778,13 @@
                 right: 0;
                 height: 100vh;
                 width: 60%;
-                background-color: var(--bg-light);
+                background-color: var(--bg-light); /* White mobile menu */
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 transform: translateX(100%);
                 transition: transform 0.3s ease-in-out;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
             }
 
             .main-nav.active {
@@ -785,6 +836,15 @@
             
             section {
                 padding: 50px 0; /* Further reduced padding for phones */
+            }
+            
+            .project-card h3 {
+                padding-right: 0; /* Remove padding for mobile */
+            }
+            
+            .github-btn-wrapper {
+                top: 15px; /* Adjust position for mobile */
+                right: 15px;
             }
 
             .cta-buttons {
@@ -845,11 +905,15 @@
             </div>
         </section>
 
+        <!-- === EDITED "ABOUT ME" SECTION === -->
         <section id="about">
             <h2 class="reveal-on-scroll"><span class="emoji">👋</span>About Me</h2>
-            <p class="reveal-on-scroll">I am a detail-oriented and disciplined Business Analyst with a strong foundation in SQL, Excel, Python, and Tableau. My experience spans KPI tracking, dashboard development, and structured problem-solving, particularly within the tech and e-commerce sectors. I thrive on translating ambiguous business questions into clear, actionable analyses that drive measurable impact.</p>
-            <p class="reveal-on-scroll">Driven by a consistent and diligent approach, I am passionate about process optimization and am always eager to tackle new challenges for skill growth, with a long-term interest in evolving into Product Management. My goal is to work in an environment where I can make a tangible difference, leveraging data to inform strategy and improve outcomes.</p>
+            <!-- Changed "Business Analyst" to "Data Analyst" -->
+            <p class="reveal-on-scroll">I am a detail-oriented and disciplined <strong>Data Analyst</strong> with a strong foundation in SQL, Excel, Python, and Tableau. My experience spans KPI tracking, dashboard development, and structured problem-solving, particularly within the tech and e-commerce sectors. I thrive on translating ambiguous business questions into clear, actionable analyses that drive measurable impact.</p>
+            <!-- Removed "Product Management" reference to focus on Data Analysis -->
+            <p class="reveal-on-scroll">Driven by a consistent and diligent approach, I am passionate about optimizing processes and am always eager to tackle new data challenges for skill growth. My goal is to work in an environment where I can make a tangible difference, leveraging data to inform strategy and improve outcomes.</p>
         </section>
+        <!-- === END OF EDITS === -->
 
         <section id="skills">
             <h2 class="reveal-on-scroll"><span class="emoji">🛠️</span>Skills & Expertise</h2>
@@ -877,6 +941,7 @@
                         <li>Tableau</li>
                         <li>MS Excel</li>
                         <li>Power BI</li>
+                        <li>Looker</li> <!-- === ADDED LOOKER === -->
                         <li>Matplotlib & Seaborn</li>
                         <li>Statistical Analysis</li>
                     </ul>
@@ -931,9 +996,13 @@
             <h2 class="reveal-on-scroll"><span class="emoji">🚀</span>My Projects</h2>
             <div class="projects-grid stagger-children">
                 
-                <a href="https://github.com/anshjain1409/uber-revenue-optimization" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 0ms;">
-                    <div class="open-now">Open on GitHub!</div>
+                <!-- === PROJECT 1: UPDATED LINK === -->
+                <div class="project-card reveal-on-scroll" style="--delay: 0ms;" onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/NL_Uber_17595641743240/Story2', '_blank');">
+                    <div class="open-now">Click for report!</div>
                     <div class="card-content">
+                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/uber-revenue-optimization', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        </div>
                         <div>
                            <h3>
                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2v-5h-4v-7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5.64"/><path d="M16 17l-1.5-1.5M19 14l1.5 1.5M14 17h5"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg>
@@ -941,7 +1010,10 @@
                            </h3>
                             <p class="project-impact">Increased revenue understanding on 10M+ trips, leading to 5 strategic recommendations.</p> 
                            <div class="project-details">
-                                <p><b>Objective:</b> Identify key factors influencing Revenue per Trip to improve Uber's profitability. Revealed that airport trips and credit card payments drive 40%+ higher revenue.</p>
+                                <p><b>Situation:</b> Uber needed to understand the key factors influencing profitability across more than 10 million trips, but lacked clear insights from their raw trip data.</p>
+                                <p><b>Task:</b> My goal was to analyze this large-scale dataset to identify the primary drivers of "Revenue per Trip" and provide actionable recommendations to improve profitability.</p>
+                                <p><b>Action:</b> I used Python and SQL to process, clean, and query the 10M+ trip records. I then built interactive Tableau dashboards to visualize the relationship between revenue and variables like trip type and payment method.</p>
+                                <p><b>Result:</b> The analysis successfully identified that airport trips and credit card payments were key drivers, generating over 40% higher revenue. This led to 5 strategic recommendations for optimizing fare structures and payment promotions.</p>
                            </div>
                         </div>
                         <div class="project-tools tooltip">
@@ -949,11 +1021,15 @@
                             <span class="tooltiptext">Analyzed 10M+ trip records using Python and SQL; visualized trends via interactive Tableau dashboards.</span>
                         </div>
                     </div>
-                </a>
+                </div>
 
-                <a href="https://github.com/anshjain1409/Tableau-Dashboard-for-Swiggy" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 150ms;">
-                    <div class="open-now">Open on GitHub!</div>
+                <!-- === PROJECT 2: UPDATED LINK === -->
+                <div class="project-card reveal-on-scroll" style="--delay: 150ms;" onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/SwiggyDashboard_17529984933780/Story2', '_blank');">
+                    <div class="open-now">Click for report!</div>
                     <div class="card-content">
+                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Tableau-Dashboard-for-Swiggy', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        </div>
                         <div>
                            <h3>
                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8a6 6 0 0 0-8.4 0L4 18"/><path d="M12 18h6"/></svg>
@@ -961,7 +1037,10 @@
                            </h3>
                             <p class="project-impact">Built dashboards for 250K+ sessions, improving conversion efficiency by 25%.</p> 
                            <div class="project-details">
-                                <p><b>Approach:</b> Engineered interactive Tableau dashboards to visualize the entire user journey, leveraging SQL to query and segment over 250,000 user sessions to pinpoint key friction points and strategic opportunities.</p>
+                                <p><b>Situation:</b> Swiggy was observing user drop-off and friction across its web platform, but needed to identify the exact bottlenecks within its 250,000+ user sessions.</p>
+                                <p><b>Task:</b> I was tasked with analyzing the entire user journey to pinpoint key friction points and develop strategies to improve conversion efficiency.</p>
+                                <p><b>Action:</b> I leveraged SQL to query and segment the 250,000+ user sessions. I then engineered a set of interactive Tableau dashboards to visualize the complete conversion funnel, from initial visit to final order.</p>
+                                <p><b>Result:</b> The dashboards clearly highlighted critical drop-off stages. My analysis and subsequent recommendations directly contributed to a 25% improvement in conversion efficiency.</p>
                            </div>
                         </div>
                         <div class="project-tools tooltip">
@@ -969,11 +1048,15 @@
                             <span class="tooltiptext">Tableau was used for interactive dashboarding and SQL for querying the session data from the database.</span>
                         </div>
                     </div>
-                </a>
+                </div>
 
-                <a href="https://github.com/anshjain1409/amazon-brazil-sql-analysis" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 300ms;">
-                    <div class="open-now">Open on GitHub!</div>
+                <!-- === PROJECT 3: UPDATED LINK === -->
+                <div class="project-card reveal-on-scroll" style="--delay: 300ms;" onclick="window.open('https://drive.google.com/file/d/1NcM-XQuXPASHP3UBdLs78FytX2foOhue/view?usp=sharing', '_blank');">
+                    <div class="open-now">Click for report!</div>
                     <div class="card-content">
+                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/amazon-brazil-sql-analysis', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        </div>
                         <div>
                             <h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
@@ -981,7 +1064,10 @@
                             </h3>
                             <p class="project-impact">Queried 1M+ transactions, recommending plays projected to lift sales by 18%.</p>
                             <div class="project-details">
-                               <p><b>Methodology:</b> Executed complex SQL queries across a 1M+ transaction dataset to analyze sales velocity and regional demand. Delivered a data-driven market entry strategy, identifying niche categories projected to lift initial sales by 18%.</p>
+                               <p><b>Situation:</b> An Indian seller needed a data-driven strategy to enter the competitive Amazon Brazil market, requiring analysis of existing sales patterns to find a profitable niche.</p>
+                               <p><b>Task:</b> My objective was to analyze over 1 million transactions to identify high-demand, low-competition product categories and regions for a successful market entry.</p>
+                               <p><b>Action:</b> I executed complex SQL queries on the 1M+ transaction dataset to model sales velocity and regional demand. I used Tableau to visualize these market gaps, comparing product popularity against seller saturation.</p>
+                               <p><b>Result:</b> I delivered a market entry strategy that identified specific niche categories. This strategy was projected to lift the seller's initial sales by 18% by avoiding overly saturated markets.</p>
                            </div>
                         </div>
                         <div class="project-tools tooltip">
@@ -989,11 +1075,15 @@
                             <span class="tooltiptext">MySQL was used to query over 1 million transaction records, and Tableau was used to visualize market trends and product opportunities.</span>
                         </div>
                     </div>
-                </a>
+                </div>
 
-                <a href="https://github.com/anshjain1409/Flipkart-customer-retention-analysis" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 450ms;">
-                     <div class="open-now">Open on GitHub!</div>
+                <!-- === PROJECT 4: UPDATED LINK === -->
+                <div class="project-card reveal-on-scroll" style="--delay: 450ms;" onclick="window.open('https://drive.google.com/file/d/1s8UwKn1H7NJB0A85f7wT2Bmc9yjphutu/view?usp=sharing', '_blank');">
+                    <div class="open-now">Click for report!</div>
                     <div class="card-content">
+                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Flipkart-customer-retention-analysis', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        </div>
                         <div>
                             <h3>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
@@ -1001,7 +1091,10 @@
                             </h3>
                             <p class="project-impact">Performed RCA on 100K+ service tickets, projecting to raise CSAT by 15% and reduce complaints by 25%.</p>
                             <div class="project-details">
-                                <p><b>Impact:</b> Conducted a comprehensive Root Cause Analysis (RCA) on 100K+ service tickets, clustering issues to identify systemic problems. Formulated optimization recommendations projected to boost CSAT by 15%.</p>
+                                <p><b>Situation:</b> Flipkart's customer service department was experiencing a high volume of complaints, but the team lacked insight into the systemic root causes, leading to repeat issues and lower CSAT scores.</p>
+                                <p><b>Task:</b> My goal was to conduct a comprehensive Root Cause Analysis (RCA) on 100,000+ service tickets to identify and cluster recurring problems.</p>
+                                <p><b>Action:</b> I used SQL and advanced Excel functions to query, filter, and segment the 100K+ tickets. I grouped them by issue type and product category to pinpoint the most frequent and severe systemic problems.</p>
+                                <p><b>Result:</b> The RCA uncovered several key operational gaps. I formulated optimization recommendations that were projected to raise CSAT by 15% and reduce overall complaint volume by 25%.</p>
                            </div>
                         </div>
                         <div class="project-tools tooltip">
@@ -1009,11 +1102,15 @@
                             <span class="tooltiptext">Advanced Excel functions and SQL queries were used to segment and analyze over 100,000 customer service tickets for root cause analysis.</span>
                         </div>
                     </div>
-                </a>
+                </div>
                 
-                <a href="https://github.com/anshjain1409/Economic-Pulse---Sentiment-Analysis" target="_blank" rel="noopener noreferrer" class="project-card reveal-on-scroll" style="--delay: 600ms;">
-                     <div class="open-now">Open on GitHub!</div>
+                <!-- === PROJECT 5: UPDATED LINK === -->
+                <div class="project-card reveal-on-scroll" style="--delay: 600ms;" onclick="window.open('https://drive.google.com/file/d/1RlvClUtbd3wKeJAl1CsGOwDPzhhcviYL/view?usp=sharing', '_blank');">
+                    <div class="open-now">Click for report!</div>
                     <div class="card-content">
+                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Economic-Pulse---Sentiment-Analysis', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        </div>
                         <div>
                            <h3>
                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
@@ -1021,7 +1118,10 @@
                            </h3>
                             <p class="project-impact">Built a pipeline to process 1,500+ financial headlines, providing early sentiment signals.</p> 
                             <div class="project-details">
-                                <p><b>Problem Statement:</b> Engineered an end-to-end NLP pipeline using Python to automate the analysis of financial news, providing early, quantified sentiment signals for economic forecasting and mitigating the lack of real-time market insight.</p>
+                                <p><b>Situation:</b> Economic forecasting was hindered by a lack of real-time, quantified market insight, forcing analysts to manually interpret thousands of financial news headlines.</p>
+                                <p><b>Task:</b> I set out to engineer an end-to-end NLP pipeline to automate the collection and sentiment analysis of financial news, providing early, quantified economic signals.</p>
+                                <p><b>Action:</b> Using Python, I built a pipeline with BeautifulSoup/Selenium for scraping 1,500+ headlines, NLTK and Vader for sentiment scoring, and Pandas/Matplotlib for data handling and visualization.</p>
+                                <p><b>Result:</b> The system successfully automated the processing of financial headlines, providing a live dashboard of quantified sentiment signals that could be used for economic forecasting and risk assessment.</p>
                            </div>
                         </div>
                         <div class="project-tools tooltip">
@@ -1029,7 +1129,34 @@
                             <span class="tooltiptext">This project used a Python stack: BeautifulSoup/Selenium for web scraping, NLTK/Vader for sentiment analysis, and Pandas/Matplotlib for data handling and visualization.</span>
                         </div>
                     </div>
-                </a>
+                </div>
+
+                <!-- === PROJECT 6: LINK CORRECT === -->
+                <div class="project-card reveal-on-scroll" style="--delay: 750ms;" onclick="window.open('https://lookerstudio.google.com/reporting/75fe1078-d7b7-49bb-93e5-03aee302e41f', '_blank');">
+                    <div class="open-now">Click for report!</div>
+                    <div class="card-content">
+                        <!-- No GitHub button for this project -->
+                        <div>
+                           <h3>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8a6 6 0 0 0-8.4 0L4 18"/><path d="M12 18h6"/></svg>
+                               Marketing Insights Dashboard
+                           </h3>
+                            <p class="project-impact">Identified Email & Twitter as top ROI channels, enabling budget reallocation from underperformers.</p> 
+                           <div class="project-details">
+                                <p><b>Situation:</b> Marketing teams lacked a clear, unified view to track campaign performance and audience behavior from raw data.</p>
+                                <p><b>Task:</b> Develop an interactive, web-based dashboard to help leadership make faster, data-driven decisions on budget allocation and identify channel ROI.</p>
+                                <p><b>Action:</b> Built a responsive dashboard using <strong>Excel</strong> for data preparation and <strong>Looker Studio</strong> for visualization. Implemented KPI scorecards, interactive filters (date, channel, age), and responsive charts to visualize performance.</p>
+                                <p><b>Result:</b> The dashboard successfully visualized key insights, identifying Email and Twitter as high-ROI channels and Instagram/Facebook as high-cost underperformers. It also revealed video ads were cost-effective and females 18-24 were a top segment.</p>
+                           </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <!-- === UPDATED TOOLS & TOOLTIP === -->
+                            <strong>Tools Used:</strong>&nbsp;Excel, Looker
+                            <span class="tooltiptext">Used Excel for data processing and Looker (Looker Studio) for interactive dashboarding.</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- === END OF UPDATED PROJECT === -->
 
             </div>
         </section>
@@ -1079,17 +1206,17 @@
                         <li>Generative AI Mastermind</li>
                     </ul>
                 </div>
+                <!-- === UPDATED NEXTLEAP CARD === -->
                 <div class="cert-card reveal-on-scroll" style="--delay: 450ms;">
                      <div class="cert-header">
                         <img src="https://placehold.co/40x40/8A2BE2/f5f5f7?text=NL" alt="NextLeap Logo">
                         <h3>NextLeap</h3>
                     </div>
                     <ul>
-                        <li>Data Analysis using Excel</li>
-                        <li>Data Analysis using SQL</li>
-                        <li>Tableau Dashboard for Swiggy</li>
+                        <li>Top Fellow (Top 10-15% of cohort)</li>
                     </ul>
                 </div>
+                <!-- === END OF UPDATE === -->
             </div>
         </section>
 
@@ -1114,7 +1241,7 @@
                 </li>
                 <li>
                     <a href="https://drive.google.com/file/d/14luddQk7UqemETC5hq_OjOT6fS4Wu4mB/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Resume">
-                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M9 1.5H6.75A2.25 2.25 0 004.5 3.75v16.5A2.25 2.25 0 006.75 22.5h10.5A2.25 2.25 0 0019.5 20.25V8.25L15 1.5H9zm-1.5 3a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zm.75 4.5a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" fill="#a1a1a6" /></svg>
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M9 1.5H6.75A2.25 2.25 0 004.5 3.75v16.5A2.25 2.25 0 006.75 22.5h10.5A2.25 2.25 0 0019.5 20.25V8.25L15 1.5H9zm-1.5 3a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zm.75 4.5a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.s5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" fill="#a1a1a6" /></svg>
                     </a>
                 </li>
             </ul>
