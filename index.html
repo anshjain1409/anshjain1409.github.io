@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ansh Jain | Data Analyst Portfolio</title>
-    <meta name="description" content="Portfolio of Ansh Jain, a skilled Data Analyst specializing in SQL, Excel, Python, and Tableau, turning data into actionable insights.">
+    <meta name="description"
+        content="Portfolio of Ansh Jain, a skilled Data Analyst specializing in SQL, Excel, Python, and Tableau, turning data into actionable insights.">
     <meta name="author" content="Ansh Jain">
-    
+
     <!-- Open Graph / Social Media Tags -->
     <meta property="og:title" content="Ansh Jain | Data Analyst Portfolio">
     <meta property="og:description" content="Turning data into actionable insights with SQL, Python, and Tableau.">
     <meta property="og:image" content="https://placehold.co/600x400/0071e3/ffffff?text=AJ">
     <meta property="og:url" content="https://anshjain1409.github.io">
     <meta property="og:type" content="website">
-    
+
     <!-- Favicon Placeholder -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
     <style>
         /* CSS Reset and Global Styles */
         :root {
@@ -35,14 +39,14 @@
             --bg-card-hover: #ffffff;
             --border-light: rgba(255, 255, 255, 0.6);
             --header-bg: rgba(255, 255, 255, 0.95);
-            --shadow-card: 0 10px 30px -10px rgba(0,0,0,0.1);
-            --shadow-card-hover: 0 20px 40px -10px rgba(0,0,0,0.2);
-            
+            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+            --shadow-card-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+
             /* Gradient Background - Light */
-            --blob-1: hsla(189,100%,56%,0.3);
-            --blob-2: hsla(260,100%,60%,0.3);
-            --blob-3: hsla(340,100%,76%,0.3);
-            
+            --blob-1: hsla(189, 100%, 56%, 0.3);
+            --blob-2: hsla(260, 100%, 60%, 0.3);
+            --blob-3: hsla(340, 100%, 76%, 0.3);
+
             --font-main: 'Inter', sans-serif;
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
@@ -55,17 +59,21 @@
             --accent: #2997ff;
             --accent-light-blue: #5ac8fa;
             --accent-tint: rgba(41, 151, 255, 0.15);
-            --bg-card: rgba(28, 28, 30, 0.75); /* Dark Glass */
+            --bg-card: rgba(28, 28, 30, 0.75);
+            /* Dark Glass */
             --bg-card-hover: rgba(44, 44, 46, 0.9);
             --border-light: rgba(255, 255, 255, 0.1);
             --header-bg: rgba(10, 10, 12, 0.95);
-            --shadow-card: 0 10px 30px -10px rgba(0,0,0,0.5);
-            --shadow-card-hover: 0 20px 40px -10px rgba(0,0,0,0.7);
+            --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --shadow-card-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.7);
 
             /* Gradient Background - Dark Space/Cyberpunk */
-            --blob-1: hsla(260, 100%, 40%, 0.2); /* Purple */
-            --blob-2: hsla(210, 100%, 40%, 0.2); /* Blue */
-            --blob-3: hsla(320, 100%, 40%, 0.2); /* Pink */
+            --blob-1: hsla(260, 100%, 40%, 0.2);
+            /* Purple */
+            --blob-2: hsla(210, 100%, 40%, 0.2);
+            /* Blue */
+            --blob-3: hsla(320, 100%, 40%, 0.2);
+            /* Pink */
         }
 
         * {
@@ -78,7 +86,7 @@
             scroll-behavior: smooth;
             height: 100%;
             overflow-y: scroll;
-            scroll-padding-top: 100px; 
+            scroll-padding-top: 100px;
         }
 
         body {
@@ -88,9 +96,9 @@
             font-size: 16px;
             -webkit-font-smoothing: antialiased;
             background-color: var(--bg-color);
-            
+
             /* Dynamic Mesh Gradient */
-            background-image: 
+            background-image:
                 radial-gradient(at 80% 0%, var(--blob-1) 0px, transparent 50%),
                 radial-gradient(at 0% 50%, var(--blob-2) 0px, transparent 50%),
                 radial-gradient(at 80% 50%, var(--blob-3) 0px, transparent 50%),
@@ -101,7 +109,7 @@
             min-height: 100vh;
             position: relative;
         }
-        
+
         /* === SCROLL PROGRESS BAR === */
         .progress-container {
             position: fixed;
@@ -151,8 +159,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            scroll-margin-top: 100px; 
-            
+            scroll-margin-top: 100px;
+
             /* Card Look */
             background: var(--bg-card);
             backdrop-filter: blur(12px);
@@ -168,28 +176,39 @@
             box-shadow: none;
             border: none;
             padding-top: 120px;
-            min-height: 85vh; /* Adjusted for no image */
+            min-height: 85vh;
+            /* Adjusted for no image */
             backdrop-filter: none;
-            scroll-margin-top: 0; 
+            scroll-margin-top: 0;
             display: flex;
-            flex-direction: column; /* Changed to column for centering */
-            align-items: center; /* Center horizontally */
-            justify-content: center; /* Center vertically */
+            flex-direction: column;
+            /* Changed to column for centering */
+            align-items: center;
+            /* Center horizontally */
+            justify-content: center;
+            /* Center vertically */
             gap: 40px;
             text-align: center;
         }
 
         .hero-content {
             flex: 1;
-            text-align: center; /* Force center */
-            max-width: 900px; /* Limit width for readability */
+            text-align: center;
+            /* Force center */
+            max-width: 900px;
+            /* Limit width for readability */
             margin: 0 auto;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             color: var(--text-header);
             font-weight: 700;
             letter-spacing: -0.02em;
@@ -205,25 +224,31 @@
         }
 
         #hero h2 {
-            font-size: clamp(32px, 6vw, 64px); /* Larger font size */
+            font-size: clamp(32px, 6vw, 64px);
+            /* Larger font size */
             color: var(--text-header);
             margin-top: 25px;
             margin-bottom: 25px;
-            font-weight: 900; /* Extra bold */
-            text-transform: uppercase; /* All caps */
+            font-weight: 900;
+            /* Extra bold */
+            text-transform: uppercase;
+            /* All caps */
             line-height: 1.1;
-            letter-spacing: 0.02em; /* Slight spacing for caps */
-            display: block; 
+            letter-spacing: 0.02em;
+            /* Slight spacing for caps */
+            display: block;
             max-width: 100%;
         }
-        
-        #hero h2::after { display: none; }
+
+        #hero h2::after {
+            display: none;
+        }
 
         /* Other section H2s remain the same */
         section:not(#hero) h2 .emoji {
             margin-right: 20px;
             font-size: clamp(40px, 6vw, 55px);
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
 
         section:not(#hero) h2::after {
@@ -249,11 +274,11 @@
         a:hover {
             color: var(--accent-light-blue);
         }
-        
+
         .container {
             padding: 0 20px;
         }
-        
+
         /* ---------------------------------------- */
         /* Animation Classes */
         /* ---------------------------------------- */
@@ -262,13 +287,13 @@
             transform: translateY(40px);
             transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        
+
         .reveal-on-scroll.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .stagger-children > * {
+        .stagger-children>* {
             transition-delay: var(--delay);
         }
 
@@ -301,6 +326,7 @@
             font-weight: 800;
             background: linear-gradient(135deg, var(--accent), #8e2de2);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
         }
@@ -326,7 +352,7 @@
             position: relative;
             transition: color 0.3s ease;
         }
-        
+
         .main-nav a::after {
             content: '';
             position: absolute;
@@ -391,11 +417,11 @@
             transition: all 0.3s ease;
             border-radius: 2px;
         }
-        
+
         /* ---------------------------------------- */
         /* Hero Section Content */
         /* ---------------------------------------- */
-        
+
         #hero h1 {
             font-size: clamp(45px, 8vw, 85px);
             margin: 0;
@@ -404,12 +430,14 @@
             /* Dynamic Gradient Text */
             background: linear-gradient(135deg, var(--text-header) 0%, var(--text-main) 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         #hero p {
             max-width: 600px;
-            margin: 20px auto; /* Centered margin */
+            margin: 20px auto;
+            /* Centered margin */
             font-size: clamp(1.1rem, 2vw, 1.25rem);
             color: var(--text-main);
         }
@@ -419,9 +447,10 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
-            justify-content: center; /* Center buttons */
+            justify-content: center;
+            /* Center buttons */
         }
-        
+
         .btn-wrapper {
             position: relative;
             display: inline-block;
@@ -429,7 +458,8 @@
 
         .btn {
             padding: 14px 32px;
-            border-radius: 50px; /* Pill shape */
+            border-radius: 50px;
+            /* Pill shape */
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
@@ -464,7 +494,7 @@
             background: var(--accent-tint);
             transform: translateY(-3px);
         }
-        
+
         /* Hero Button Tooltip (Different from project hover) */
         .btn-wrapper .open-now {
             position: absolute;
@@ -483,9 +513,9 @@
             transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             pointer-events: none;
             z-index: 10;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        
+
         .btn-wrapper:hover .open-now {
             opacity: 1;
             transform: translate(-50%, -8px) scale(1);
@@ -502,7 +532,7 @@
             border-style: solid;
             border-color: var(--text-header) transparent transparent transparent;
         }
-        
+
         /* ---------------------------------------- */
         /* About Section */
         /* ---------------------------------------- */
@@ -537,6 +567,7 @@
             box-shadow: var(--shadow-card);
             transition: var(--transition);
         }
+
         .expertise-block:hover {
             box-shadow: var(--shadow-card-hover);
             transform: translateY(-5px);
@@ -595,25 +626,25 @@
         }
 
         .experience-card {
-            display: block; 
+            display: block;
             background: var(--bg-card);
             border-radius: 16px;
             padding: 35px;
             border-left: 5px solid var(--accent);
             transition: var(--transition);
             box-shadow: var(--shadow-card);
-            text-decoration: none; 
-            color: inherit; 
-            position: relative; 
+            text-decoration: none;
+            color: inherit;
+            position: relative;
             border: 1px solid var(--border-light);
         }
-        
+
         .experience-card:hover {
-             box-shadow: var(--shadow-card-hover);
-             transform: translateX(5px);
-             background: var(--bg-card-hover);
+            box-shadow: var(--shadow-card-hover);
+            transform: translateX(5px);
+            background: var(--bg-card-hover);
         }
-        
+
         .experience-card h3 {
             font-size: 1.5rem;
             margin-bottom: 5px;
@@ -621,7 +652,7 @@
             align-items: center;
             color: var(--text-header);
         }
-        
+
         .experience-card h3 svg {
             width: 22px;
             height: 22px;
@@ -634,7 +665,7 @@
             font-weight: 600;
             font-size: 1.1rem;
         }
-        
+
         .experience-card .date {
             font-size: 0.9rem;
             color: var(--text-main);
@@ -647,14 +678,14 @@
         .experience-card ul {
             list-style: none;
         }
-        
+
         .experience-card li {
             margin-bottom: 12px;
             padding-left: 24px;
             position: relative;
             color: var(--text-main);
         }
-        
+
         .experience-card li::before {
             content: '▹';
             position: absolute;
@@ -676,7 +707,7 @@
             opacity: 0;
             transform: translateY(-5px);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .experience-card:hover .cert-badge {
@@ -698,7 +729,7 @@
             border-radius: 16px;
             transition: var(--transition);
             position: relative;
-            height: auto; 
+            height: auto;
             text-decoration: none;
             box-shadow: var(--shadow-card);
             cursor: pointer;
@@ -710,7 +741,7 @@
             overflow: hidden;
             position: relative;
         }
-        
+
         .project-card:hover {
             transform: translateY(-8px);
             box-shadow: var(--shadow-card-hover);
@@ -723,26 +754,30 @@
             position: absolute;
             top: 0;
             left: 0;
-            transform: translate(-50%, -50%) scale(0.5); /* Start small */
-            
+            transform: translate(-50%, -50%) scale(0.5);
+            /* Start small */
+
             /* Visuals */
-            background: var(--accent); 
+            background: var(--accent);
             color: white;
             padding: 8px 16px;
             font-size: 0.9rem;
             font-weight: 600;
-            border-radius: 30px; /* Pill shape */
+            border-radius: 30px;
+            /* Pill shape */
             box-shadow: 0 5px 15px rgba(0, 113, 227, 0.4);
-            
+
             /* Behavior */
             opacity: 0;
             visibility: visible;
-            pointer-events: none; /* Crucial: clicks go through to card */
+            pointer-events: none;
+            /* Crucial: clicks go through to card */
             z-index: 20;
             white-space: nowrap;
-            
+
             /* Transitions */
-            transition: opacity 0.2s ease, transform 0.1s ease-out; /* Fast transform, smooth opacity */
+            transition: opacity 0.2s ease, transform 0.1s ease-out;
+            /* Fast transform, smooth opacity */
         }
 
         .project-card .open-now::after {
@@ -767,10 +802,10 @@
             margin-bottom: 12px;
             display: flex;
             align-items: flex-start;
-            padding-right: 40px; 
+            padding-right: 40px;
             line-height: 1.3;
         }
-        
+
         .project-card h3 svg {
             min-width: 24px;
             width: 24px;
@@ -795,27 +830,27 @@
         }
 
         .project-card:hover .project-details {
-            max-height: 1500px; 
+            max-height: 1500px;
             opacity: 1;
             margin-top: 15px;
             padding-top: 15px;
             border-top: 1px solid var(--border-light);
         }
-        
+
         .project-details p {
             font-size: 0.95rem;
             margin-bottom: 12px;
             color: var(--text-main);
             line-height: 1.5;
         }
-        
+
         .project-details b {
             color: var(--text-header);
             font-weight: 600;
         }
 
         .project-tools {
-            margin-top: auto; 
+            margin-top: auto;
             padding-top: 20px;
             font-size: 0.85rem;
             color: var(--text-main);
@@ -823,13 +858,16 @@
             border-top: 1px solid transparent;
             transition: border-color 0.3s;
         }
-        
+
         .project-card:hover .project-tools {
-            border-color: transparent; 
+            border-color: transparent;
         }
 
-        .project-tools strong { color: var(--text-header); opacity: 1; }
-        
+        .project-tools strong {
+            color: var(--text-header);
+            opacity: 1;
+        }
+
         .github-btn-wrapper {
             position: absolute;
             top: 25px;
@@ -842,24 +880,29 @@
             transition: var(--transition);
             border: 1px solid var(--border-light);
         }
-        
+
         .github-btn-wrapper svg {
             display: block;
             width: 20px;
             height: 20px;
             fill: var(--text-main);
         }
-        
+
         .github-btn-wrapper:hover {
             background: var(--text-header);
             transform: rotate(15deg);
         }
+
         .github-btn-wrapper:hover svg {
             fill: var(--bg-color);
         }
 
         /* Tooltip */
-        .tooltip { position: relative; display: inline-block; }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
         .tooltip .tooltiptext {
             visibility: hidden;
             width: 280px;
@@ -876,14 +919,16 @@
             opacity: 0;
             transition: opacity 0.3s, transform 0.3s;
             font-size: 0.85rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             pointer-events: none;
         }
+
         .tooltip:hover .tooltiptext {
             visibility: visible;
             opacity: 1;
             transform: translateX(-50%) translateY(-5px);
         }
+
         .tooltip .tooltiptext::after {
             content: "";
             position: absolute;
@@ -906,59 +951,209 @@
             box-shadow: var(--shadow-card);
             border: 1px solid var(--border-light);
         }
-        .methodology-card h2 { justify-content: center; margin-bottom: 30px; }
-        .methodology-card h2::after { display: none; }
-        .methodology-card p { margin-bottom: 40px; font-size: 1.15rem; max-width: 800px; margin-left: auto; margin-right: auto; color: var(--text-main); }
-        
-        .methodology-footer { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        
+
+        .methodology-card h2 {
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .methodology-card h2::after {
+            display: none;
+        }
+
+        .methodology-card p {
+            margin-bottom: 40px;
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-main);
+        }
+
+        .methodology-footer {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
         .methodology-point {
-            display: flex; align-items: center; font-weight: 600; font-size: 1rem; padding: 10px 20px;
-            background: var(--bg-card-hover); border-radius: 50px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            color: var(--text-header); border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 10px 20px;
+            background: var(--bg-card-hover);
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            color: var(--text-header);
+            border: 1px solid var(--border-light);
         }
-        .methodology-point::before { content: ''; display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 10px; }
-        .methodology-point.data-driven::before { background-color: #0071e3; }
-        .methodology-point.measurable-impact::before { background-color: #34c759; }
-        .methodology-point.strategic-rec::before { background-color: #af52de; }
 
-        .certifications-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        
+        .methodology-point::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .methodology-point.data-driven::before {
+            background-color: #0071e3;
+        }
+
+        .methodology-point.measurable-impact::before {
+            background-color: #34c759;
+        }
+
+        .methodology-point.strategic-rec::before {
+            background-color: #af52de;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
         .cert-card {
-            background: var(--bg-card); border-radius: 16px; padding: 30px; transition: var(--transition);
-            box-shadow: var(--shadow-card); border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 30px;
+            transition: var(--transition);
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-light);
         }
-        .cert-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card-hover); background: var(--bg-card-hover); }
 
-        .cert-header { display: flex; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--border-light); }
-        .cert-header img { width: 45px; height: 45px; margin-right: 15px; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .cert-header h3 { font-size: 1.2rem; margin: 0; color: var(--text-header); }
-        .cert-card ul { list-style: none; padding: 0; }
-        .cert-card li { margin-bottom: 12px; padding-left: 24px; position: relative; font-size: 0.95rem; color: var(--text-main); }
-        .cert-card li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card-hover);
+            background: var(--bg-card-hover);
+        }
+
+        .cert-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .cert-header img {
+            width: 45px;
+            height: 45px;
+            margin-right: 15px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cert-header h3 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: var(--text-header);
+        }
+
+        .cert-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cert-card li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .cert-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
 
         /* ---------------------------------------- */
         /* Contact Section & Footer */
         /* ---------------------------------------- */
-        #contact { text-align: center; }
-        #contact h2 { justify-content: center; }
-        #contact h2::after { display: none; }
-        #contact p { max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; color: var(--text-main); }
-
-        .contact-links { list-style: none; padding: 0; margin-bottom: 40px; }
-        .contact-links li { margin: 15px 0; font-size: 1.2rem; }
-
-        .social-links { display: flex; justify-content: center; gap: 30px; list-style: none; }
-        .social-links a {
-            display: flex; justify-content: center; align-items: center; width: 60px; height: 60px;
-            background: var(--bg-card); border-radius: 50%; box-shadow: var(--shadow-card);
-            transition: var(--transition); border: 1px solid var(--border-light);
+        #contact {
+            text-align: center;
         }
-        .social-links a svg { width: 28px; height: 28px; fill: var(--text-main); transition: var(--transition); }
-        .social-links a:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 10px 25px rgba(0, 113, 227, 0.3); background: var(--bg-card-hover); }
-        .social-links a:hover svg { fill: var(--accent); }
-        
-        .footer { text-align: center; padding: 40px 20px; font-size: 0.9rem; color: var(--text-main); background: var(--header-bg); backdrop-filter: blur(5px); }
+
+        #contact h2 {
+            justify-content: center;
+        }
+
+        #contact h2::after {
+            display: none;
+        }
+
+        #contact p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .contact-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+
+        .contact-links li {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .social-links a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+            background: var(--bg-card);
+            border-radius: 50%;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+            border: 1px solid var(--border-light);
+        }
+
+        .social-links a svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 113, 227, 0.3);
+            background: var(--bg-card-hover);
+        }
+
+        .social-links a:hover svg {
+            fill: var(--accent);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            background: var(--header-bg);
+            backdrop-filter: blur(5px);
+        }
 
         /* === BACK TO TOP BUTTON === */
         .back-to-top {
@@ -975,7 +1170,7 @@
             align-items: center;
             cursor: pointer;
             border: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             z-index: 99;
             opacity: 0;
@@ -1011,6 +1206,7 @@
         }
 
         @media (max-width: 768px) {
+
             /* SECTION SPACING */
             section {
                 min-height: auto;
@@ -1018,12 +1214,12 @@
                 margin: 20px 10px;
                 border-radius: 16px;
             }
-            
+
             /* HEADER LAYOUT */
             .header {
                 padding: 1rem 1.5rem;
             }
-            
+
             .nav-wrapper {
                 gap: 10px;
             }
@@ -1034,7 +1230,8 @@
                 top: 0;
                 right: 0;
                 height: 100vh;
-                width: 80%; /* Wider for better touch targets */
+                width: 80%;
+                /* Wider for better touch targets */
                 max-width: 300px;
                 background-color: var(--header-bg);
                 flex-direction: column;
@@ -1042,8 +1239,9 @@
                 align-items: center;
                 transform: translateX(100%);
                 transition: transform 0.3s ease-in-out;
-                box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-                z-index: 999; /* Ensure above everything */
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+                /* Ensure above everything */
                 border-left: 1px solid var(--border-light);
             }
 
@@ -1056,15 +1254,16 @@
                 align-items: center;
                 width: 100%;
             }
-            
+
             .main-nav li {
                 margin: 15px 0;
                 width: 100%;
                 text-align: center;
             }
-            
+
             .main-nav a {
-                font-size: 1.2rem; /* Larger text for mobile */
+                font-size: 1.2rem;
+                /* Larger text for mobile */
                 display: block;
                 padding: 10px;
             }
@@ -1078,60 +1277,161 @@
                 display: block;
             }
 
-            .hamburger.toggle .div:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
-            .hamburger.toggle .div:nth-child(2) { opacity: 0; }
-            .hamburger.toggle .div:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
-            
+            .hamburger.toggle .div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.toggle .div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.toggle .div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
             /* HERO MOBILE */
             #hero {
                 /* flex-direction: column-reverse; Removed since photo is gone */
                 padding-top: 120px;
                 gap: 30px;
             }
-            
+
             .cta-buttons {
                 justify-content: center;
             }
-            
+
             /* GRID MOBILE FIX: Force single column */
-            .projects-grid, .expertise-grid, .certifications-grid {
+            .projects-grid,
+            .expertise-grid,
+            .certifications-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             /* Adjust font sizes for readability */
-            h1 { font-size: 42px !important; }
-            h2 { font-size: 28px !important; }
-            #hero h2 { font-size: 32px !important; } /* Tagline specific */
-            h2 .emoji { font-size: 32px; }
-            
+            h1 {
+                font-size: 42px !important;
+            }
+
+            h2 {
+                font-size: 28px !important;
+            }
+
+            #hero h2 {
+                font-size: 32px !important;
+            }
+
+            /* Tagline specific */
+            h2 .emoji {
+                font-size: 32px;
+            }
+
             /* Ensure project details are scrollable/visible on mobile hover/click */
             .project-card:hover .project-details {
-                max-height: none; /* Allow full expansion */
+                max-height: none;
+                /* Allow full expansion */
             }
-            
+
             .project-card h3 {
                 font-size: 1.2rem;
-                padding-right: 0; /* GitHub icon space logic */
+                padding-right: 0;
+                /* GitHub icon space logic */
             }
-            
+
             .github-btn-wrapper {
                 top: 20px;
                 right: 20px;
             }
 
-            .btn-wrapper { width: 100%; margin-right: 0; }
-            .btn { width: 100%; }
-        }
-        
-        @media (max-width: 320px) {
-            /* Extra small devices */
-            h1 { font-size: 32px !important; }
-            .header { padding: 1rem; }
-            .logo a { font-size: 1.5rem; }
+            .btn-wrapper {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .btn {
+                width: 100%;
+            }
         }
 
+        @media (max-width: 320px) {
+
+            /* Extra small devices */
+            h1 {
+                font-size: 32px !important;
+            }
+
+            .header {
+                padding: 1rem;
+            }
+
+            .logo a {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* STATS SECTION */
+        #stats {
+            padding: 60px 20px;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-light);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            flex: 1;
+            min-width: 250px;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-card-hover);
+            background: var(--bg-card-hover);
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .stat-number.blue {
+            color: #0056b3;
+            color: var(--accent);
+        }
+
+        .stat-number.teal {
+            color: #17a2b8;
+        }
+
+        .stat-number.purple {
+            color: #6f42c1;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- === SCROLL PROGRESS BAR === -->
@@ -1153,7 +1453,10 @@
                 </ul>
             </nav>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
-                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+                </svg>
             </button>
             <div class="hamburger" aria-label="Open Menu">
                 <div></div>
@@ -1169,41 +1472,72 @@
         <section id="hero">
             <div class="hero-content">
                 <h1 class="reveal-on-scroll">Ansh Jain</h1>
-                
+
                 <!-- NEW BOLD TAGLINE -->
                 <h2 class="reveal-on-scroll" style="--delay: 100ms">I INTERROGATE DATA UNTIL IT CONFESSES.</h2>
-                
+
                 <!-- SUBTEXT -->
-                <p class="reveal-on-scroll" style="--delay: 200ms">Helping businesses stop guessing and start growing using SQL, Python, and Tableau.</p>
-                
+                <p class="reveal-on-scroll" style="--delay: 200ms">Helping businesses stop guessing and start growing
+                    using SQL, Python, and Tableau.</p>
+
                 <div class="cta-buttons reveal-on-scroll" style="--delay: 300ms">
                     <div class="btn-wrapper">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
                         <div class="open-now">See Projects!</div>
                     </div>
-                     <div class="btn-wrapper">
-                        <a href="https://drive.google.com/file/d/1rNejoMJR6dda_MS-BZZfrYRkP8-q3hOe/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Resume</a>
-                         <div class="open-now">PDF Version</div>
+                    <div class="btn-wrapper">
+                        <a href="https://drive.google.com/file/d/1rNejoMJR6dda_MS-BZZfrYRkP8-q3hOe/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Resume</a>
+                        <div class="open-now">PDF Version</div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Removed Hero Image Container -->
         </section>
 
+        <!-- STATS SECTION -->
+        <section id="stats" class="reveal-on-scroll">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3 class="stat-number blue" data-target="8" data-suffix="+">0+</h3>
+                    <p class="stat-label">Projects Completed</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number teal" data-target="15" data-suffix="+">0+</h3>
+                    <p class="stat-label">Tools Mastered</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number purple" data-target="100" data-suffix="%">0%</h3>
+                    <p class="stat-label">Data-Driven</p>
+                </div>
+            </div>
+        </section>
+
+
         <section id="about">
             <h2 class="reveal-on-scroll"><span class="emoji">👋</span>About Me</h2>
-            <p class="reveal-on-scroll">I am a detail-oriented and disciplined <strong>Data Analyst</strong> with a strong foundation in SQL, Excel, Python, and Tableau. My experience spans KPI tracking, dashboard development, and structured problem-solving, particularly within the tech and e-commerce sectors.</p>
-            <p class="reveal-on-scroll">Driven by a consistent and diligent approach, I am passionate about optimizing processes and am always eager to tackle new data challenges for skill growth. My goal is to work in an environment where I can make a tangible difference, leveraging data to inform strategy and improve outcomes.</p>
+            <p class="reveal-on-scroll">I am a detail-oriented and disciplined <strong>Data Analyst</strong> with a
+                strong foundation in SQL, Excel, Python, and Tableau. My experience spans KPI tracking, dashboard
+                development, and structured problem-solving, particularly within the tech and e-commerce sectors.</p>
+            <p class="reveal-on-scroll">Driven by a consistent and diligent approach, I am passionate about optimizing
+                processes and am always eager to tackle new data challenges for skill growth. My goal is to work in an
+                environment where I can make a tangible difference, leveraging data to inform strategy and improve
+                outcomes.</p>
         </section>
 
         <section id="skills">
             <h2 class="reveal-on-scroll"><span class="emoji">🛠️</span>Skills & Expertise</h2>
-            <p class="skills-intro reveal-on-scroll">A comprehensive toolkit for transforming data into strategic business insights.</p>
+            <p class="skills-intro reveal-on-scroll">A comprehensive toolkit for transforming data into strategic
+                business insights.</p>
             <div class="expertise-grid stagger-children">
                 <div class="expertise-block reveal-on-scroll" style="--delay: 0ms;">
                     <div class="expertise-header">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
                         <h3>Business Analysis</h3>
                     </div>
                     <ul>
@@ -1216,10 +1550,13 @@
                 </div>
                 <div class="expertise-block reveal-on-scroll" style="--delay: 150ms;">
                     <div class="expertise-header">
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20V16"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20V10M18 20V4M6 20V16" />
+                        </svg>
                         <h3>Data Analysis</h3>
                     </div>
-                     <ul>
+                    <ul>
                         <li>Tableau</li>
                         <li>MS Excel</li>
                         <li>Power BI</li>
@@ -1230,10 +1567,14 @@
                 </div>
                 <div class="expertise-block reveal-on-scroll" style="--delay: 300ms;">
                     <div class="expertise-header">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
                         <h3>Programming</h3>
                     </div>
-                     <ul>
+                    <ul>
                         <li>Python</li>
                         <li>SQL</li>
                         <li>MySQL</li>
@@ -1247,32 +1588,47 @@
             <h2 class="reveal-on-scroll"><span class="emoji">💼</span>Professional Experience</h2>
             <div class="experience-cards stagger-children">
                 <!-- Entire card is now a link -->
-                <a href="https://drive.google.com/file/d/11W5cWFdpXGV5qCE4OxHRTZbXmCrW0h7F/view?usp=sharing" target="_blank" class="experience-card reveal-on-scroll" style="--delay: 0ms;">
+                <a href="https://drive.google.com/file/d/11W5cWFdpXGV5qCE4OxHRTZbXmCrW0h7F/view?usp=sharing"
+                    target="_blank" class="experience-card reveal-on-scroll" style="--delay: 0ms;">
                     <div class="cert-badge">View Certificate 📜</div>
                     <h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
                         Data Analyst Fellow
                     </h3>
                     <p class="company">NextLeap Data Analyst Fellowship | India (Online)</p>
                     <span class="date">May 2025 – Aug 2025</span>
                     <ul>
-                        <li>Leveraged <b>Excel, SQL, Tableau,</b> and <b>Python</b> to solve real-world business cases and complete over 100 problem sets.</li>
-                        <li>Participated in a rigorous, case-based curriculum to master the entire data analytics workflow from data preparation to visualization.</li>
-                        <li>Engaged in weekly 1:1 mentor sessions with industry experts for personalized feedback on assignments and projects.</li>
+                        <li>Leveraged <b>Excel, SQL, Tableau,</b> and <b>Python</b> to solve real-world business cases
+                            and complete over 100 problem sets.</li>
+                        <li>Participated in a rigorous, case-based curriculum to master the entire data analytics
+                            workflow from data preparation to visualization.</li>
+                        <li>Engaged in weekly 1:1 mentor sessions with industry experts for personalized feedback on
+                            assignments and projects.</li>
                     </ul>
                 </a>
-                
-                <a href="https://drive.google.com/file/d/1b9chHh0UN5a9ATmTUTgiFESXZy9_IlXM/view?usp=sharing" target="_blank" class="experience-card reveal-on-scroll" style="--delay: 150ms;">
+
+                <a href="https://drive.google.com/file/d/1b9chHh0UN5a9ATmTUTgiFESXZy9_IlXM/view?usp=sharing"
+                    target="_blank" class="experience-card reveal-on-scroll" style="--delay: 150ms;">
                     <div class="cert-badge">View Certificate 📜</div>
                     <h3>
-                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
                         Financial Analyst Intern
                     </h3>
                     <p class="company">Margin Sentiment Advisory Pvt. Ltd. | Bengaluru, India (Remote)</p>
                     <span class="date">Jul 2025 – Sep 2025</span>
                     <ul>
-                        <li>Analyzed historical data to operationalize structured short-selling strategies and surfaced high-confidence candidates.</li>
-                        <li>Designed risk–reward and scenario analysis frameworks that reduced execution errors and improved decision accuracy by 35%.</li>
+                        <li>Analyzed historical data to operationalize structured short-selling strategies and surfaced
+                            high-confidence candidates.</li>
+                        <li>Designed risk–reward and scenario analysis frameworks that reduced execution errors and
+                            improved decision accuracy by 35%.</li>
                     </ul>
                 </a>
             </div>
@@ -1281,201 +1637,404 @@
         <section id="projects">
             <h2 class="reveal-on-scroll"><span class="emoji">🚀</span>My Projects</h2>
             <div class="projects-grid stagger-children">
-                
-                <!-- NEW PROJECT: Emergency Operator Dashboard -->
-                <div class="project-card reveal-on-scroll" style="--delay: 0ms;" onclick="window.open('https://drive.google.com/file/d/1rPogg-laCC1m7Qa7jkysC2oTwdXiUamY/view?usp=sharing', '_blank');">
-                    <div class="open-now">View Report 📊</div>
+
+                <!-- NEW PROJECT: Sequre Query -->
+                <div class="project-card reveal-on-scroll" style="--delay: 0ms;"
+                    onclick="window.open('https://sequre-query-04.streamlit.app/', '_blank');">
+                    <div class="open-now">Launch App 🚀</div>
                     <div class="card-content">
-                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409?tab=repositories', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409?tab=repositories', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
                         </div>
                         <div>
-                           <h3>
-                               <!-- Phone/Emergency Icon -->
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                               Real-Time AI Emergency Operator Dashboard
-                           </h3>
-                            <p class="project-impact">Integrated Twilio & Whisper to reduce operator response latency to ~3s.</p> 
-                           <div class="project-details">
-                                <p><b>Situation:</b> Emergency call centers struggle with manual transcription and high cognitive load, leading to potential errors and delayed responses.</p>
-                                <p><b>Task:</b> Develop a real-time system to automate call transcription, extract critical entities (location, type), and triage calls instantly.</p>
-                                <p><b>Action:</b> Built a full-stack solution using Twilio Media Streams for audio, OpenAI Whisper for ASR, and GPT-4 for NLP extraction, displayed on a React dashboard.</p>
-                                <p><b>Result:</b> Achieved end-to-end latency of ~3 seconds for live updates, enabling operators to verify auto-filled forms instead of typing, significantly improving efficiency.</p>
-                           </div>
+                            <h3>
+                                <!-- Shield/Secure Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                Sequre Query: The Autonomous Analyst
+                            </h3>
+                            <p class="project-impact">AI-powered, privacy-first analytics platform using Gemini &
+                                Ollama.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> Complex data analysis usually requires SQL proficiency, creating a
+                                    barrier for non-technical users to access insights securely.</p>
+                                <p><b>Task:</b> Build a "talk-to-your-data" interface that ensures privacy (Local Mode)
+                                    while offering cloud-scale power (Gemini), without writing code.</p>
+                                <p><b>Action:</b> Developed a Streamlit app with a dual-engine architecture (Gemini 2.0
+                                    Flash + Ollama). Features include autonomous SQL generation, self-healing error
+                                    correction, and automatic Plotly visualizations.</p>
+                                <p><b>Result:</b> Democratized data access with a secure, dual-mode system that
+                                    instantly converts natural language into executed queries and interactive charts.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Python, Streamlit, Gemini, Ollama
+                            <span class="tooltiptext">Backend: Python, LangChain logic. AI: Google Gemini (Cloud),
+                                Ollama (Local). Frontend: Streamlit. Database: SQLite (Ephemeral).</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Operator Dashboard -->
+                <div class="project-card reveal-on-scroll" style="--delay: 150ms;"
+                    onclick="window.open('https://drive.google.com/file/d/1rPogg-laCC1m7Qa7jkysC2oTwdXiUamY/view?usp=sharing', '_blank');">
+                    <div class="open-now">View Report 📊</div>
+                    <div class="card-content">
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409?tab=repositories', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>
+                                <!-- Phone/Emergency Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                                Real-Time AI Emergency Operator Dashboard
+                            </h3>
+                            <p class="project-impact">Integrated Twilio & Whisper to reduce operator response latency to
+                                ~3s.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> Emergency call centers struggle with manual transcription and high
+                                    cognitive load, leading to potential errors and delayed responses.</p>
+                                <p><b>Task:</b> Develop a real-time system to automate call transcription, extract
+                                    critical entities (location, type), and triage calls instantly.</p>
+                                <p><b>Action:</b> Built a full-stack solution using Twilio Media Streams for audio,
+                                    OpenAI Whisper for ASR, and GPT-4 for NLP extraction, displayed on a React
+                                    dashboard.</p>
+                                <p><b>Result:</b> Achieved end-to-end latency of ~3 seconds for live updates, enabling
+                                    operators to verify auto-filled forms instead of typing, significantly improving
+                                    efficiency.</p>
+                            </div>
                         </div>
                         <div class="project-tools tooltip">
                             <strong>Tools Used:</strong>&nbsp;React, Node.js, Twilio, Whisper
-                            <span class="tooltiptext">Twilio for streaming, Whisper for ASR, GPT-4 for NLP, React/Node.js for the dashboard.</span>
+                            <span class="tooltiptext">Twilio for streaming, Whisper for ASR, GPT-4 for NLP,
+                                React/Node.js for the dashboard.</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- PROJECT 1 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 150ms;" onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/NL_Uber_17595641743240/Story2', '_blank');">
+                <div class="project-card reveal-on-scroll" style="--delay: 300ms;"
+                    onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/NL_Uber_17595641743240/Story2', '_blank');">
                     <div class="open-now">View Analysis 📊</div>
                     <div class="card-content">
-                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/uber-revenue-optimization', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/uber-revenue-optimization', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
                         </div>
                         <div>
-                           <h3>
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2v-5h-4v-7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5.64"/><path d="M16 17l-1.5-1.5M19 14l1.5 1.5M14 17h5"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg>
-                               Uber Revenue Optimization Analysis
-                           </h3>
-                            <p class="project-impact">Increased revenue understanding on 10M+ trips, leading to 5 strategic recommendations.</p> 
-                           <div class="project-details">
-                                <p><b>Situation:</b> Uber needed to understand the key factors influencing profitability across more than 10 million trips, but lacked clear insights from their raw trip data.</p>
-                                <p><b>Task:</b> My goal was to analyze this large-scale dataset to identify the primary drivers of "Revenue per Trip" and provide actionable recommendations to improve profitability.</p>
-                                <p><b>Action:</b> I used Python and SQL to process, clean, and query the 10M+ trip records. I then built interactive Tableau dashboards to visualize the relationship between revenue and variables like trip type and payment method.</p>
-                                <p><b>Result:</b> The analysis successfully identified that airport trips and credit card payments were key drivers, generating over 40% higher revenue. This led to 5 strategic recommendations for optimizing fare structures and payment promotions.</p>
-                           </div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M19 17h2v-5h-4v-7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5.64" />
+                                    <path d="M16 17l-1.5-1.5M19 14l1.5 1.5M14 17h5" />
+                                    <circle cx="7.5" cy="17.5" r="2.5" />
+                                    <circle cx="16.5" cy="17.5" r="2.5" />
+                                </svg>
+                                Uber Revenue Optimization Analysis
+                            </h3>
+                            <p class="project-impact">Increased revenue understanding on 10M+ trips, leading to 5
+                                strategic recommendations.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> Uber needed to understand the key factors influencing profitability
+                                    across more than 10 million trips, but lacked clear insights from their raw trip
+                                    data.</p>
+                                <p><b>Task:</b> My goal was to analyze this large-scale dataset to identify the primary
+                                    drivers of "Revenue per Trip" and provide actionable recommendations to improve
+                                    profitability.</p>
+                                <p><b>Action:</b> I used Python and SQL to process, clean, and query the 10M+ trip
+                                    records. I then built interactive Tableau dashboards to visualize the relationship
+                                    between revenue and variables like trip type and payment method.</p>
+                                <p><b>Result:</b> The analysis successfully identified that airport trips and credit
+                                    card payments were key drivers, generating over 40% higher revenue. This led to 5
+                                    strategic recommendations for optimizing fare structures and payment promotions.</p>
+                            </div>
                         </div>
                         <div class="project-tools tooltip">
                             <strong>Tools Used:</strong>&nbsp;Python, SQL, Tableau
-                            <span class="tooltiptext">Analyzed 10M+ trip records using Python and SQL; visualized trends via interactive Tableau dashboards.</span>
+                            <span class="tooltiptext">Analyzed 10M+ trip records using Python and SQL; visualized trends
+                                via interactive Tableau dashboards.</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- PROJECT 2 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 300ms;" onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/SwiggyDashboard_17529984933780/Story2', '_blank');">
-                     <div class="open-now">View Analysis 📊</div>
+                <div class="project-card reveal-on-scroll" style="--delay: 450ms;"
+                    onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/SwiggyDashboard_17529984933780/Story2', '_blank');">
+                    <div class="open-now">View Analysis 📊</div>
                     <div class="card-content">
-                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Tableau-Dashboard-for-Swiggy', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Tableau-Dashboard-for-Swiggy', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
                         </div>
                         <div>
-                           <h3>
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8a6 6 0 0 0-8.4 0L4 18"/><path d="M12 18h6"/></svg>
-                               Swiggy Web Traffic & Conversion Analysis
-                           </h3>
-                            <p class="project-impact">Built dashboards for 250K+ sessions, improving conversion efficiency by 25%.</p> 
-                           <div class="project-details">
-                                <p><b>Situation:</b> Swiggy was observing user drop-off and friction across its web platform, but needed to identify the exact bottlenecks within its 250,000+ user sessions.</p>
-                                <p><b>Task:</b> I was tasked with analyzing the entire user journey to pinpoint key friction points and develop strategies to improve conversion efficiency.</p>
-                                <p><b>Action:</b> I leveraged SQL to query and segment the 250,000+ user sessions. I then engineered a set of interactive Tableau dashboards to visualize the complete conversion funnel, from initial visit to final order.</p>
-                                <p><b>Result:</b> The dashboards clearly highlighted critical drop-off stages. My analysis and subsequent recommendations directly contributed to a 25% improvement in conversion efficiency.</p>
-                           </div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M3 3v18h18" />
+                                    <path d="M18.7 8a6 6 0 0 0-8.4 0L4 18" />
+                                    <path d="M12 18h6" />
+                                </svg>
+                                Swiggy Web Traffic & Conversion Analysis
+                            </h3>
+                            <p class="project-impact">Built dashboards for 250K+ sessions, improving conversion
+                                efficiency by 25%.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> Swiggy was observing user drop-off and friction across its web
+                                    platform, but needed to identify the exact bottlenecks within its 250,000+ user
+                                    sessions.</p>
+                                <p><b>Task:</b> I was tasked with analyzing the entire user journey to pinpoint key
+                                    friction points and develop strategies to improve conversion efficiency.</p>
+                                <p><b>Action:</b> I leveraged SQL to query and segment the 250,000+ user sessions. I
+                                    then engineered a set of interactive Tableau dashboards to visualize the complete
+                                    conversion funnel, from initial visit to final order.</p>
+                                <p><b>Result:</b> The dashboards clearly highlighted critical drop-off stages. My
+                                    analysis and subsequent recommendations directly contributed to a 25% improvement in
+                                    conversion efficiency.</p>
+                            </div>
                         </div>
                         <div class="project-tools tooltip">
                             <strong>Tools Used:</strong>&nbsp;Tableau, SQL
-                            <span class="tooltiptext">Tableau was used for interactive dashboarding and SQL for querying the session data from the database.</span>
+                            <span class="tooltiptext">Tableau was used for interactive dashboarding and SQL for querying
+                                the session data from the database.</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- PROJECT 3 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 450ms;" onclick="window.open('https://drive.google.com/file/d/1NcM-XQuXPASHP3UBdLs78FytX2foOhue/view?usp=sharing', '_blank');">
-                     <div class="open-now">View Analysis 📊</div>
+                <div class="project-card reveal-on-scroll" style="--delay: 600ms;"
+                    onclick="window.open('https://drive.google.com/file/d/1NcM-XQuXPASHP3UBdLs78FytX2foOhue/view?usp=sharing', '_blank');">
+                    <div class="open-now">View Analysis 📊</div>
                     <div class="card-content">
-                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/amazon-brazil-sql-analysis', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/amazon-brazil-sql-analysis', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
                         </div>
                         <div>
                             <h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
                                 Amazon Brazil Market Analysis for Indian Entry
                             </h3>
-                            <p class="project-impact">Queried 1M+ transactions, recommending plays projected to lift sales by 18%.</p>
+                            <p class="project-impact">Queried 1M+ transactions, recommending plays projected to lift
+                                sales by 18%.</p>
                             <div class="project-details">
-                               <p><b>Situation:</b> An Indian seller needed a data-driven strategy to enter the competitive Amazon Brazil market, requiring analysis of existing sales patterns to find a profitable niche.</p>
-                               <p><b>Task:</b> My objective was to analyze over 1 million transactions to identify high-demand, low-competition product categories and regions for a successful market entry.</p>
-                               <p><b>Action:</b> I executed complex SQL queries on the 1M+ transaction dataset to model sales velocity and regional demand. I used Tableau to visualize these market gaps, comparing product popularity against seller saturation.</p>
-                               <p><b>Result:</b> I delivered a market entry strategy that identified specific niche categories. This strategy was projected to lift the seller's initial sales by 18% by avoiding overly saturated markets.</p>
-                           </div>
+                                <p><b>Situation:</b> An Indian seller needed a data-driven strategy to enter the
+                                    competitive Amazon Brazil market, requiring analysis of existing sales patterns to
+                                    find a profitable niche.</p>
+                                <p><b>Task:</b> My objective was to analyze over 1 million transactions to identify
+                                    high-demand, low-competition product categories and regions for a successful market
+                                    entry.</p>
+                                <p><b>Action:</b> I executed complex SQL queries on the 1M+ transaction dataset to model
+                                    sales velocity and regional demand. I used Tableau to visualize these market gaps,
+                                    comparing product popularity against seller saturation.</p>
+                                <p><b>Result:</b> I delivered a market entry strategy that identified specific niche
+                                    categories. This strategy was projected to lift the seller's initial sales by 18% by
+                                    avoiding overly saturated markets.</p>
+                            </div>
                         </div>
                         <div class="project-tools tooltip">
                             <strong>Tools Used:</strong>&nbsp;MySQL, Tableau
-                            <span class="tooltiptext">MySQL was used to query over 1 million transaction records, and Tableau was used to visualize market trends and product opportunities.</span>
+                            <span class="tooltiptext">MySQL was used to query over 1 million transaction records, and
+                                Tableau was used to visualize market trends and product opportunities.</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- PROJECT 4 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 600ms;" onclick="window.open('https://drive.google.com/file/d/1s8UwKn1H7NJB0A85f7wT2Bmc9yjphutu/view?usp=sharing', '_blank');">
-                     <div class="open-now">View Analysis 📊</div>
+                <div class="project-card reveal-on-scroll" style="--delay: 750ms;"
+                    onclick="window.open('https://drive.google.com/file/d/1s8UwKn1H7NJB0A85f7wT2Bmc9yjphutu/view?usp=sharing', '_blank');">
+                    <div class="open-now">View Analysis 📊</div>
                     <div class="card-content">
-                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Flipkart-customer-retention-analysis', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Flipkart-customer-retention-analysis', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
                         </div>
                         <div>
                             <h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                                </svg>
                                 Flipkart Customer Service Optimization
                             </h3>
-                            <p class="project-impact">Performed RCA on 100K+ service tickets, projecting to raise CSAT by 15% and reduce complaints by 25%.</p>
+                            <p class="project-impact">Performed RCA on 100K+ service tickets, projecting to raise CSAT
+                                by 15% and reduce complaints by 25%.</p>
                             <div class="project-details">
-                                <p><b>Situation:</b> Flipkart's customer service department was experiencing a high volume of complaints, but the team lacked insight into the systemic root causes, leading to repeat issues and lower CSAT scores.</p>
-                                <p><b>Task:</b> My goal was to conduct a comprehensive Root Cause Analysis (RCA) on 100,000+ service tickets to identify and cluster recurring problems.</p>
-                                <p><b>Action:</b> I used SQL and advanced Excel functions to query, filter, and segment the 100K+ tickets. I grouped them by issue type and product category to pinpoint the most frequent and severe systemic problems.</p>
-                                <p><b>Result:</b> The RCA uncovered several key operational gaps. I formulated optimization recommendations that were projected to raise CSAT by 15% and reduce overall complaint volume by 25%.</p>
-                           </div>
+                                <p><b>Situation:</b> Flipkart's customer service department was experiencing a high
+                                    volume of complaints, but the team lacked insight into the systemic root causes,
+                                    leading to repeat issues and lower CSAT scores.</p>
+                                <p><b>Task:</b> My goal was to conduct a comprehensive Root Cause Analysis (RCA) on
+                                    100,000+ service tickets to identify and cluster recurring problems.</p>
+                                <p><b>Action:</b> I used SQL and advanced Excel functions to query, filter, and segment
+                                    the 100K+ tickets. I grouped them by issue type and product category to pinpoint the
+                                    most frequent and severe systemic problems.</p>
+                                <p><b>Result:</b> The RCA uncovered several key operational gaps. I formulated
+                                    optimization recommendations that were projected to raise CSAT by 15% and reduce
+                                    overall complaint volume by 25%.</p>
+                            </div>
                         </div>
                         <div class="project-tools tooltip">
                             <strong>Tools Used:</strong>&nbsp;Excel, SQL
-                            <span class="tooltiptext">Advanced Excel functions and SQL queries were used to segment and analyze over 100,000 customer service tickets for root cause analysis.</span>
+                            <span class="tooltiptext">Advanced Excel functions and SQL queries were used to segment and
+                                analyze over 100,000 customer service tickets for root cause analysis.</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- PROJECT 5 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 750ms;" onclick="window.open('https://drive.google.com/file/d/1RlvClUtbd3wKeJAl1CsGOwDPzhhcviYL/view?usp=sharing', '_blank');">
-                     <div class="open-now">View Report 📊</div>
+                <div class="project-card reveal-on-scroll" style="--delay: 900ms;"
+                    onclick="window.open('https://drive.google.com/file/d/1RlvClUtbd3wKeJAl1CsGOwDPzhhcviYL/view?usp=sharing', '_blank');">
+                    <div class="open-now">View Report 📊</div>
                     <div class="card-content">
-                        <div class="github-btn-wrapper" onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Economic-Pulse---Sentiment-Analysis', '_blank');" aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Economic-Pulse---Sentiment-Analysis', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
                         </div>
                         <div>
-                           <h3>
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
-                               Sentiment Analysis of Economic Conditions
-                           </h3>
-                            <p class="project-impact">Built a pipeline to process 1,500+ financial headlines, providing early sentiment signals.</p> 
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="12" y1="20" x2="12" y2="10"></line>
+                                    <line x1="18" y1="20" x2="18" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="16"></line>
+                                </svg>
+                                Sentiment Analysis of Economic Conditions
+                            </h3>
+                            <p class="project-impact">Built a pipeline to process 1,500+ financial headlines, providing
+                                early sentiment signals.</p>
                             <div class="project-details">
-                                <p><b>Situation:</b> Economic forecasting was hindered by a lack of real-time, quantified market insight, forcing analysts to manually interpret thousands of financial news headlines.</p>
-                                <p><b>Task:</b> I set out to engineer an end-to-end NLP pipeline to automate the collection and sentiment analysis of financial news, providing early, quantified economic signals.</p>
-                                <p><b>Action:</b> Using Python, I built a pipeline with BeautifulSoup/Selenium for scraping 1,500+ headlines, NLTK and Vader for sentiment scoring, and Pandas/Matplotlib for data handling and visualization.</p>
-                                <p><b>Result:</b> The system successfully automated the processing of financial headlines, providing a live dashboard of quantified sentiment signals that could be used for economic forecasting and risk assessment.</p>
-                           </div>
+                                <p><b>Situation:</b> Economic forecasting was hindered by a lack of real-time,
+                                    quantified market insight, forcing analysts to manually interpret thousands of
+                                    financial news headlines.</p>
+                                <p><b>Task:</b> I set out to engineer an end-to-end NLP pipeline to automate the
+                                    collection and sentiment analysis of financial news, providing early, quantified
+                                    economic signals.</p>
+                                <p><b>Action:</b> Using Python, I built a pipeline with BeautifulSoup/Selenium for
+                                    scraping 1,500+ headlines, NLTK and Vader for sentiment scoring, and
+                                    Pandas/Matplotlib for data handling and visualization.</p>
+                                <p><b>Result:</b> The system successfully automated the processing of financial
+                                    headlines, providing a live dashboard of quantified sentiment signals that could be
+                                    used for economic forecasting and risk assessment.</p>
+                            </div>
                         </div>
                         <div class="project-tools tooltip">
                             <strong>Tools Used:</strong>&nbsp;Python, NLTK, BeautifulSoup, Selenium, Pandas, Matplotlib
-                            <span class="tooltiptext">This project used a Python stack: BeautifulSoup/Selenium for web scraping, NLTK/Vader for sentiment analysis, and Pandas/Matplotlib for data handling and visualization.</span>
+                            <span class="tooltiptext">This project used a Python stack: BeautifulSoup/Selenium for web
+                                scraping, NLTK/Vader for sentiment analysis, and Pandas/Matplotlib for data handling and
+                                visualization.</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- PROJECT 6 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 900ms;" onclick="window.open('https://lookerstudio.google.com/reporting/75fe1078-d7b7-49bb-93e5-03aee302e41f', '_blank');">
-                     <div class="open-now">View Report 📊</div>
+                <div class="project-card reveal-on-scroll" style="--delay: 1050ms;"
+                    onclick="window.open('https://lookerstudio.google.com/reporting/75fe1078-d7b7-49bb-93e5-03aee302e41f', '_blank');">
+                    <div class="open-now">View Report 📊</div>
                     <div class="card-content">
                         <div>
-                           <h3>
-                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8a6 6 0 0 0-8.4 0L4 18"/><path d="M12 18h6"/></svg>
-                               Marketing Insights Dashboard
-                           </h3>
-                            <p class="project-impact">Identified Email & Twitter as top ROI channels, enabling budget reallocation from underperformers.</p> 
-                           <div class="project-details">
-                                <p><b>Situation:</b> Marketing teams lacked a clear, unified view to track campaign performance and audience behavior from raw data.</p>
-                                <p><b>Task:</b> Develop an interactive, web-based dashboard to help leadership make faster, data-driven decisions on budget allocation and identify channel ROI.</p>
-                                <p><b>Action:</b> Built a responsive dashboard using <strong>Excel</strong> for data preparation and <strong>Looker Studio</strong> for visualization. Implemented KPI scorecards, interactive filters (date, channel, age), and responsive charts to visualize performance.</p>
-                                <p><b>Result:</b> The dashboard successfully visualized key insights, identifying Email and Twitter as high-ROI channels and Instagram/Facebook as high-cost underperformers. It also revealed video ads were cost-effective and females 18-24 were a top segment.</p>
-                           </div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M3 3v18h18" />
+                                    <path d="M18.7 8a6 6 0 0 0-8.4 0L4 18" />
+                                    <path d="M12 18h6" />
+                                </svg>
+                                Marketing Insights Dashboard
+                            </h3>
+                            <p class="project-impact">Identified Email & Twitter as top ROI channels, enabling budget
+                                reallocation from underperformers.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> Marketing teams lacked a clear, unified view to track campaign
+                                    performance and audience behavior from raw data.</p>
+                                <p><b>Task:</b> Develop an interactive, web-based dashboard to help leadership make
+                                    faster, data-driven decisions on budget allocation and identify channel ROI.</p>
+                                <p><b>Action:</b> Built a responsive dashboard using <strong>Excel</strong> for data
+                                    preparation and <strong>Looker Studio</strong> for visualization. Implemented KPI
+                                    scorecards, interactive filters (date, channel, age), and responsive charts to
+                                    visualize performance.</p>
+                                <p><b>Result:</b> The dashboard successfully visualized key insights, identifying Email
+                                    and Twitter as high-ROI channels and Instagram/Facebook as high-cost
+                                    underperformers. It also revealed video ads were cost-effective and females 18-24
+                                    were a top segment.</p>
+                            </div>
                         </div>
                         <div class="project-tools tooltip">
                             <strong>Tools Used:</strong>&nbsp;Excel, Looker
-                            <span class="tooltiptext">Used Excel for data processing and Looker (Looker Studio) for interactive dashboarding.</span>
+                            <span class="tooltiptext">Used Excel for data processing and Looker (Looker Studio) for
+                                interactive dashboarding.</span>
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </section>
 
         <section id="methodology">
             <div class="methodology-card reveal-on-scroll">
                 <h2>Project Methodology</h2>
-                <p>Each project follows a structured approach: data collection and validation, exploratory analysis, hypothesis formation, statistical testing, insight generation, and actionable recommendation development. Focus on translating complex findings into clear business value.</p>
+                <p>Each project follows a structured approach: data collection and validation, exploratory analysis,
+                    hypothesis formation, statistical testing, insight generation, and actionable recommendation
+                    development. Focus on translating complex findings into clear business value.</p>
                 <div class="methodology-footer">
                     <span class="methodology-point data-driven">Data-Driven Insights</span>
                     <span class="methodology-point measurable-impact">Measurable Impact</span>
@@ -1489,7 +2048,7 @@
             <div class="certifications-grid stagger-children">
                 <!-- NextLeap -->
                 <div class="cert-card reveal-on-scroll" style="--delay: 0ms;">
-                     <div class="cert-header">
+                    <div class="cert-header">
                         <img src="https://placehold.co/45x45/8A2BE2/f5f5f7?text=NL" alt="NextLeap Logo">
                         <h3>NextLeap</h3>
                     </div>
@@ -1497,7 +2056,7 @@
                         <li>Top Fellow (Top 10% of cohort)</li>
                     </ul>
                 </div>
-                
+
                 <!-- Coursera -->
                 <div class="cert-card reveal-on-scroll" style="--delay: 150ms;">
                     <div class="cert-header">
@@ -1510,10 +2069,10 @@
                         <li>Content, Advertising & Social IMC (Northwestern University)</li>
                     </ul>
                 </div>
-                
+
                 <!-- HackerRank -->
                 <div class="cert-card reveal-on-scroll" style="--delay: 300ms;">
-                     <div class="cert-header">
+                    <div class="cert-header">
                         <img src="https://placehold.co/45x45/2a2a2e/f5f5f7?text=H" alt="HackerRank Logo">
                         <h3>HackerRank & LeetCode</h3>
                     </div>
@@ -1523,10 +2082,10 @@
                         <li>Top 50 SQL Questions (LeetCode)</li>
                     </ul>
                 </div>
-                
+
                 <!-- Outskill -->
                 <div class="cert-card reveal-on-scroll" style="--delay: 450ms;">
-                     <div class="cert-header">
+                    <div class="cert-header">
                         <img src="https://placehold.co/45x45/4caf50/f5f5f7?text=O" alt="Outskill Logo">
                         <h3>Outskill</h3>
                     </div>
@@ -1539,7 +2098,8 @@
 
         <section id="contact">
             <h2 class="reveal-on-scroll"><span class="emoji">💬</span>Get In Touch</h2>
-            <p class="reveal-on-scroll">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!</p>
+            <p class="reveal-on-scroll">I'm always open to discussing new projects, creative ideas, or opportunities to
+                be part of your visions. Feel free to reach out!</p>
             <ul class="contact-links reveal-on-scroll">
                 <li><a href="mailto:anshjain14092004@gmail.com">anshjain14092004@gmail.com</a></li>
                 <li><a href="tel:+917017732268">+91 70177 32268</a></li>
@@ -1547,18 +2107,32 @@
             </ul>
             <ul class="social-links reveal-on-scroll">
                 <li>
-                    <a href="https://www.linkedin.com/in/anshjain2u/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75 .79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <a href="https://www.linkedin.com/in/anshjain2u/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75 .79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/anshjain1409?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                    <a href="https://github.com/anshjain1409?tab=repositories" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                            </path>
+                        </svg>
                     </a>
                 </li>
                 <li>
-                    <a href="https://drive.google.com/file/d/1rNejoMJR6dda_MS-BZZfrYRkP8-q3hOe/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume">
-                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M9 1.5H6.75A2.25 2.25 0 004.5 3.75v16.5A2.25 2.25 0 006.75 22.5h10.5A2.25 2.25 0 0019.5 20.25V8.25L15 1.5H9zm-1.5 3a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zm.75 4.5a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.s5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" fill="#a1a1a6" /></svg>
+                    <a href="https://drive.google.com/file/d/1rNejoMJR6dda_MS-BZZfrYRkP8-q3hOe/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path
+                                d="M9 1.5H6.75A2.25 2.25 0 004.5 3.75v16.5A2.25 2.25 0 006.75 22.5h10.5A2.25 2.25 0 0019.5 20.25V8.25L15 1.5H9zm-1.5 3a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zm.75 4.5a.75.75 0 000 1.5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.s5h6a.75.75 0 000-1.5h-6zm0 3a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
+                                fill="#a1a1a6" />
+                        </svg>
                     </a>
                 </li>
             </ul>
@@ -1572,18 +2146,21 @@
 
     <!-- === BACK TO TOP BUTTON === -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm0 18a8 8 0 118-8 8.009 8.009 0 01-8 8zm3.293-10.707a1 1 0 00-1.414 0L13 10.172V16a1 1 0 01-2 0v-5.828l-.879.879a1 1 0 00-1.414-1.414l2.586-2.586a1 1 0 011.414 0z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm0 18a8 8 0 118-8 8.009 8.009 0 01-8 8zm3.293-10.707a1 1 0 00-1.414 0L13 10.172V16a1 1 0 01-2 0v-5.828l-.879.879a1 1 0 00-1.414-1.414l2.586-2.586a1 1 0 011.414 0z" />
+        </svg>
     </button>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            
+        document.addEventListener('DOMContentLoaded', function () {
+
             window.scrollTo(0, 0);
 
             // === THEME TOGGLE LOGIC ===
             const themeToggle = document.getElementById('theme-toggle');
             const htmlEl = document.documentElement;
-            
+
             const savedTheme = localStorage.getItem('theme') || 'light';
             htmlEl.setAttribute('data-theme', savedTheme);
             updateIcon(savedTheme);
@@ -1609,25 +2186,25 @@
             const header = document.querySelector('.header');
             const backToTopBtn = document.getElementById('backToTop');
             let lastScrollTop = 0;
-            
+
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
 
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                
+
                 // 1. Progress Bar
                 let scrolled = (scrollTop / height) * 100;
                 progressBar.style.width = scrolled + "%";
-                
+
                 // 2. Back to Top Button Visibility
                 if (scrollTop > 300) {
                     backToTopBtn.classList.add('show');
                 } else {
                     backToTopBtn.classList.remove('show');
                 }
-                
+
                 // 3. Sticky Header Hide/Show
                 if (scrollTop > lastScrollTop && scrollTop > 80) {
                     header.classList.add('hidden');
@@ -1635,7 +2212,7 @@
                     header.classList.remove('hidden');
                     header.style.transform = 'translateY(0)';
                 }
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 
                 // 4. Scroll Spy (Active Link Highlighting)
                 let current = '';
@@ -1703,19 +2280,51 @@
             const projectCards = document.querySelectorAll('.project-card');
             projectCards.forEach(card => {
                 const badge = card.querySelector('.open-now');
-                if(badge) {
+                if (badge) {
                     card.addEventListener('mousemove', (e) => {
                         const rect = card.getBoundingClientRect();
                         const x = e.clientX - rect.left;
                         const y = e.clientY - rect.top;
-                        
+
                         badge.style.left = `${x}px`;
                         badge.style.top = `${y}px`;
                     });
                 }
             });
 
+            // === STATS COUNTER ANIMATION ===
+            const statsSection = document.querySelector('#stats');
+            const statNumbers = document.querySelectorAll('.stat-number');
+            let started = false; // Function started ? No
+
+            function startCount(el) {
+                let target = el.dataset.target;
+                let suffix = el.dataset.suffix || "";
+                let count = 0;
+                let speed = 2000 / target; // Adjust speed based on target to finish in 2s
+
+                let counter = setInterval(() => {
+                    count++;
+                    el.textContent = count + suffix;
+                    if (count == target) {
+                        clearInterval(counter);
+                    }
+                }, speed);
+            }
+
+            const statsObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !started) {
+                    statNumbers.forEach((num) => startCount(num));
+                    started = true;
+                }
+            });
+
+            if (statsSection) {
+                statsObserver.observe(statsSection);
+            }
+
         });
     </script>
 </body>
+
 </html>
