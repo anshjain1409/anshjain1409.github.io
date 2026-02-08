@@ -203,6 +203,46 @@
             align-items: center;
         }
 
+        /* === NEW PROFILE PHOTO STYLES === */
+        .profile-img-wrapper {
+            margin-bottom: 35px;
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            padding: 6px;
+            /* Create space for the gradient border */
+            background: linear-gradient(135deg, var(--accent), #8e2de2);
+            /* Gradient border effect */
+            box-shadow: var(--shadow-card-hover);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            border: 5px solid var(--bg-card);
+            /* Inner border to separate image from gradient */
+            background-color: var(--bg-card);
+            /* Fallback */
+        }
+
+        .profile-img-wrapper:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 113, 227, 0.3);
+        }
+
+        /* Mobile responsive adjustment for photo */
+        @media (max-width: 768px) {
+            .profile-photo {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+
         h1,
         h2,
         h3,
@@ -1468,43 +1508,49 @@
 
     <main class="container">
 
-        <!-- UPDATED HERO SECTION: No Photo, Centered, Bold Tagline -->
+        <!-- UPDATED HERO SECTION: With Photo -->
         <section id="hero">
             <div class="hero-content">
-                <h1 class="reveal-on-scroll">Ansh Jain</h1>
+                <!-- NEW: Profile Image Container -->
+                <div class="profile-img-wrapper reveal-on-scroll">
+                    <!-- Updated to use local file, with fallback for preview environment -->
+                    <img src="Profilephoto.png" alt="Ansh Jain" class="profile-photo"
+                        onerror="this.onerror=null; this.src='https://placehold.co/200x200/0071e3/ffffff?text=AJ';">
+                </div>
+
+                <h1 class="reveal-on-scroll" style="--delay: 100ms">Ansh Jain</h1>
 
                 <!-- NEW BOLD TAGLINE -->
-                <h2 class="reveal-on-scroll" style="--delay: 100ms">I INTERROGATE DATA UNTIL IT CONFESSES.</h2>
+                <h2 class="reveal-on-scroll" style="--delay: 200ms">I INTERROGATE DATA UNTIL IT CONFESSES.</h2>
 
                 <!-- SUBTEXT -->
-                <p class="reveal-on-scroll" style="--delay: 200ms">Helping businesses stop guessing and start growing
+                <p class="reveal-on-scroll" style="--delay: 300ms">Helping businesses stop guessing and start growing
                     using SQL, Python, and Tableau.</p>
 
-                <div class="cta-buttons reveal-on-scroll" style="--delay: 300ms">
+                <div class="cta-buttons reveal-on-scroll" style="--delay: 400ms">
                     <div class="btn-wrapper">
                         <a href="#projects" class="btn btn-primary">View My Work</a>
                         <div class="open-now">See Projects!</div>
                     </div>
                     <div class="btn-wrapper">
-                        <a href="https://drive.google.com/file/d/1rNejoMJR6dda_MS-BZZfrYRkP8-q3hOe/view?usp=sharing"
+                        <!-- Updated Resume Link -->
+                        <a href="https://drive.google.com/file/d/1DJ_d2tPcHWfqg7kGPGiQJAhTIk3XLf_1/view?usp=drive_link"
                             target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Resume</a>
                         <div class="open-now">PDF Version</div>
                     </div>
                 </div>
             </div>
-
-            <!-- Removed Hero Image Container -->
         </section>
 
         <!-- STATS SECTION -->
         <section id="stats" class="reveal-on-scroll">
             <div class="stats-container">
                 <div class="stat-card">
-                    <h3 class="stat-number blue" data-target="9" data-suffix="+">0+</h3>
+                    <h3 class="stat-number blue" data-target="10" data-suffix="+">0+</h3>
                     <p class="stat-label">Projects Completed</p>
                 </div>
                 <div class="stat-card">
-                    <h3 class="stat-number teal" data-target="15" data-suffix="+">0+</h3>
+                    <h3 class="stat-number teal" data-target="20" data-suffix="+">0+</h3>
                     <p class="stat-label">Tools Mastered</p>
                 </div>
                 <div class="stat-card">
@@ -1541,7 +1587,7 @@
                         <h3>Business Analysis</h3>
                     </div>
                     <ul>
-                        <li>Requirement Gathering</li>
+                        <li>Strategic Analysis</li>
                         <li>Process Optimization</li>
                         <li>KPI Tracking</li>
                         <li>Risk Analysis</li>
@@ -1554,14 +1600,13 @@
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 20V10M18 20V4M6 20V16" />
                         </svg>
-                        <h3>Data Analysis</h3>
+                        <h3>Data & AI</h3>
                     </div>
                     <ul>
-                        <li>Tableau</li>
-                        <li>MS Excel</li>
-                        <li>Power BI</li>
-                        <li>Looker</li>
-                        <li>Matplotlib & Seaborn</li>
+                        <li>Tableau & Power BI</li>
+                        <li>ETL Pipelines</li>
+                        <li>Generative AI & LLMs</li>
+                        <li>NLP & Sentiment Analysis</li>
                         <li>Statistical Analysis</li>
                     </ul>
                 </div>
@@ -1575,10 +1620,9 @@
                         <h3>Programming</h3>
                     </div>
                     <ul>
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>MySQL</li>
-                        <li>C++</li>
+                        <li>Python (Pandas, Scikit)</li>
+                        <li>SQL (PostgreSQL)</li>
+                        <li>DAX & Power Query</li>
                     </ul>
                 </div>
             </div>
@@ -1638,8 +1682,56 @@
             <h2 class="reveal-on-scroll"><span class="emoji">🚀</span>My Projects</h2>
             <div class="projects-grid stagger-children">
 
-                <!-- NEW PROJECT: Sequre Query -->
+                <!-- 1. PROJECT: Uber -->
                 <div class="project-card reveal-on-scroll" style="--delay: 0ms;"
+                    onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/NL_Uber_17595641743240/Story2', '_blank');">
+                    <div class="open-now">View Analysis 📊</div>
+                    <div class="card-content">
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/uber-revenue-optimization', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M19 17h2v-5h-4v-7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5.64" />
+                                    <path d="M16 17l-1.5-1.5M19 14l1.5 1.5M14 17h5" />
+                                    <circle cx="7.5" cy="17.5" r="2.5" />
+                                    <circle cx="16.5" cy="17.5" r="2.5" />
+                                </svg>
+                                Uber: Optimizing Revenue per Trip
+                            </h3>
+                            <p class="project-impact">Increased revenue understanding on 10M+ trips, finding +40%
+                                revenue lift in card payments.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> High trip volume masked uneven revenue efficiency across payment
+                                    modes, routes, and time windows.</p>
+                                <p><b>Task:</b> Isolate true revenue drivers to inform suboptimal driver incentives and
+                                    pricing strategies.</p>
+                                <p><b>Action:</b> Processed 10M+ trips using memory-efficient Pandas workflows. Tested
+                                    seven hypotheses across payment method, distance bands, and temporal demand.</p>
+                                <p><b>Result:</b> Found that Credit Card trips generated ~40% higher revenue due to a
+                                    97% tipping rate. Recommended shifting incentives toward card adoption and
+                                    airport-specialist routing.</p>
+                            </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Python, Pandas, Tableau
+                            <span class="tooltiptext">Analyzed 10M+ trip records using Python/Pandas; visualized trends
+                                via Tableau.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. PROJECT: Sequre Query -->
+                <div class="project-card reveal-on-scroll" style="--delay: 150ms;"
                     onclick="window.open('https://sequre-query-04.streamlit.app/', '_blank');">
                     <div class="open-now">Launch App 🚀</div>
                     <div class="card-content">
@@ -1665,28 +1757,220 @@
                             <p class="project-impact">AI-powered, privacy-first analytics platform using Gemini &
                                 Ollama.</p>
                             <div class="project-details">
-                                <p><b>Situation:</b> Complex data analysis usually requires SQL proficiency, creating a
-                                    barrier for non-technical users to access insights securely.</p>
+                                <p><b>Situation:</b> Non-technical users face a steep barrier to data access, while
+                                    enterprises face privacy constraints using cloud-based AI analytics.</p>
                                 <p><b>Task:</b> Build a "talk-to-your-data" interface that ensures privacy (Local Mode)
                                     while offering cloud-scale power (Gemini), without writing code.</p>
-                                <p><b>Action:</b> Developed a Streamlit app with a dual-engine architecture (Gemini 2.0
-                                    Flash + Ollama). Features include autonomous SQL generation, self-healing error
-                                    correction, and automatic Plotly visualizations.</p>
-                                <p><b>Result:</b> Democratized data access with a secure, dual-mode system that
-                                    instantly converts natural language into executed queries and interactive charts.
-                                </p>
+                                <p><b>Action:</b> Developed a dual-mode LLM-powered analytics system using Python,
+                                    Streamlit, and LangChain. Implemented self-healing SQL generation and ephemeral
+                                    in-memory databases.</p>
+                                <p><b>Result:</b> Democratized data access for sensitive datasets via local-mode
+                                    execution, positioning it as a secure internal analytics copilot.</p>
                             </div>
                         </div>
                         <div class="project-tools tooltip">
                             <strong>Tools Used:</strong>&nbsp;Python, Streamlit, Gemini, Ollama
                             <span class="tooltiptext">Backend: Python, LangChain logic. AI: Google Gemini (Cloud),
-                                Ollama (Local). Frontend: Streamlit. Database: SQLite (Ephemeral).</span>
+                                Ollama (Local). Frontend: Streamlit.</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Emergency Operator Dashboard -->
-                <div class="project-card reveal-on-scroll" style="--delay: 150ms;"
+                <!-- 3. Walmart Retail Strategic Analysis -->
+                <div class="project-card reveal-on-scroll" style="--delay: 300ms;"
+                    onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/WallmartProject_17695002859320/RetailWalkthrough', '_blank');">
+                    <div class="open-now">View Dashboard 📊</div>
+                    <div class="card-content">
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409?tab=repositories', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>
+                                <!-- Shopping Cart / Retail Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                Walmart Retail Strategic Analysis
+                            </h3>
+                            <p class="project-impact">Uncovered $105M revenue anomaly and identified 35x higher spend in
+                                Card users.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> Investigated significant "value leakage" in regional stores where
+                                    high
+                                    transactional volume masked low profitability.</p>
+                                <p><b>Task:</b> Diagnosis of efficient vs. inefficient sales drivers underlying the
+                                    value
+                                    leakage.</p>
+                                <p><b>Action:</b> Engineered a high-performance ETL pipeline using Power Query and
+                                    VertiPaq to process millions of rows (reducing memory by 95%) and conducted
+                                    hypothesis-driven analysis.</p>
+                                <p><b>Result:</b> Revealed a "Wholesale Anomaly" where ~9,100 B2B buyers generated $105M
+                                    revenue. Recommended shifting to a "B2B Supply Hub" model to reduce checkout
+                                    friction.</p>
+                            </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Excel Power Pivot, DAX, Tableau
+                            <span class="tooltiptext">Used Power Query/VertiPaq for ETL on millions of rows, DAX for
+                                analysis, and Tableau for visualization.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. PROJECT: Bumble -->
+                <div class="project-card reveal-on-scroll" style="--delay: 450ms;"
+                    onclick="window.open('https://drive.google.com/file/d/1Tas3RHrAW2QW6Brs4mk0C_5FiOzgpcUw/view?usp=sharing', '_blank');">
+                    <div class="open-now">View Analysis 📊</div>
+                    <div class="card-content">
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409?tab=repositories', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>
+                                <!-- Users/Group Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                Bumble: Strategic User Profiling
+                            </h3>
+                            <p class="project-impact">Defined 4 key user personas and identified critical marketplace
+                                imbalances.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> User growth masked underlying marketplace imbalance, risking
+                                    long-term churn and liquidity collapse.</p>
+                                <p><b>Task:</b> Conduct a strategic analysis to clean data, identify key user segments,
+                                    and diagnose marketplace health issues.</p>
+                                <p><b>Action:</b> Engineered behavioral features and applied K-Means clustering to
+                                    define personas. Measured gender ratios by geography to assess marketplace health.
+                                </p>
+                                <p><b>Result:</b> A male oversupply in key locations created structural churn risk.
+                                    Recommended introducing gamification and actively managing gender ratios.</p>
+                            </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Python, Pandas, Scikit-learn, Matplotlib
+                            <span class="tooltiptext">Used Python for data cleaning and feature engineering,
+                                Scikit-learn for K-Means clustering, and Matplotlib/Seaborn for visualization.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. PROJECT: Swiggy -->
+                <div class="project-card reveal-on-scroll" style="--delay: 600ms;"
+                    onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/SwiggyDashboard_17529984933780/Story2', '_blank');">
+                    <div class="open-now">View Analysis 📊</div>
+                    <div class="card-content">
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Tableau-Dashboard-for-Swiggy', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M3 3v18h18" />
+                                    <path d="M18.7 8a6 6 0 0 0-8.4 0L4 18" />
+                                    <path d="M12 18h6" />
+                                </svg>
+                                Swiggy Web Analytics Dashboard
+                            </h3>
+                            <p class="project-impact">Built dashboards for 250K+ sessions, improving conversion
+                                efficiency by 25%.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> High web traffic failed to convert proportionally, indicating
+                                    possible attribution errors or low-quality traffic.</p>
+                                <p><b>Task:</b> Analyze session-level data across device, source, and geography to
+                                    isolate friction points.</p>
+                                <p><b>Action:</b> Analyzed session-level data and engineered logic to isolate bot
+                                    traffic. Rebuilt the conversion funnel excluding non-human sessions.</p>
+                                <p><b>Result:</b> Found that 7.22% of traffic was bot-driven. Recommended reallocating
+                                    spend toward high-intent regions like Maharashtra and Karnataka.</p>
+                            </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Tableau, Excel
+                            <span class="tooltiptext">Tableau was used for interactive dashboarding and Excel for data
+                                cleaning.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. PROJECT: Amazon -->
+                <div class="project-card reveal-on-scroll" style="--delay: 750ms;"
+                    onclick="window.open('https://drive.google.com/file/d/1NcM-XQuXPASHP3UBdLs78FytX2foOhue/view?usp=sharing', '_blank');">
+                    <div class="open-now">View Analysis 📊</div>
+                    <div class="card-content">
+                        <div class="github-btn-wrapper"
+                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/amazon-brazil-sql-analysis', '_blank');"
+                            aria-label="View on GitHub" role="button" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                                Amazon Brazil Market Analysis
+                            </h3>
+                            <p class="project-impact">Queried 1M+ transactions, recommending plays projected to lift
+                                sales by 18%.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> Amazon Brazil needed insight into customer behavior and payment
+                                    preferences to inform international expansion strategy for India.</p>
+                                <p><b>Task:</b> Analyze 1M+ transactions to identify high-demand categories and regions
+                                    for successful market entry.</p>
+                                <p><b>Action:</b> Built complex SQL pipelines using CTEs and window functions to segment
+                                    customers, track lifecycle behavior, and evaluate payment consistency.</p>
+                                <p><b>Result:</b> Validated that Credit Cards dominated (74% of orders). Identified
+                                    mid-range “smart” products as the strongest segment. Recommended prioritizing EMI
+                                    partnerships.</p>
+                            </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;PostgreSQL, Tableau
+                            <span class="tooltiptext">PostgreSQL was used for complex SQL pipelines (CTEs/Window
+                                Functions), Tableau for visualization.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Emergency Operator Dashboard -->
+                <div class="project-card reveal-on-scroll" style="--delay: 900ms;"
                     onclick="window.open('https://drive.google.com/file/d/1rPogg-laCC1m7Qa7jkysC2oTwdXiUamY/view?usp=sharing', '_blank');">
                     <div class="open-now">View Report 📊</div>
                     <div class="card-content">
@@ -1714,278 +1998,25 @@
                             <p class="project-impact">Integrated Twilio & Whisper to reduce operator response latency to
                                 ~3s.</p>
                             <div class="project-details">
-                                <p><b>Situation:</b> Emergency call centers struggle with manual transcription and high
-                                    cognitive load, leading to potential errors and delayed responses.</p>
-                                <p><b>Task:</b> Develop a real-time system to automate call transcription, extract
-                                    critical entities (location, type), and triage calls instantly.</p>
-                                <p><b>Action:</b> Built a full-stack solution using Twilio Media Streams for audio,
-                                    OpenAI Whisper for ASR, and GPT-4 for NLP extraction, displayed on a React
-                                    dashboard.</p>
-                                <p><b>Result:</b> Achieved end-to-end latency of ~3 seconds for live updates, enabling
-                                    operators to verify auto-filled forms instead of typing, significantly improving
-                                    efficiency.</p>
+                                <p><b>Situation:</b> Emergency response centers suffer from operator overload, where
+                                    critical information is buried in unstructured conversations.</p>
+                                <p><b>Task:</b> Develop a real-time system to automate call transcription and triage
+                                    calls instantly to reduce latency.</p>
+                                <p><b>Action:</b> Designed a low-latency real-time ETL pipeline using Twilio Media
+                                    Streams, OpenAI Whisper for ASR, and GPT-4 for NLP extraction.</p>
+                                <p><b>Result:</b> Reduced operator decision fatigue and achieved latency of <3 seconds.
+                                        Recommended deploying as a decision-support layer.</p>
                             </div>
                         </div>
                         <div class="project-tools tooltip">
-                            <strong>Tools Used:</strong>&nbsp;React, Node.js, Twilio, Whisper
+                            <strong>Tools Used:</strong>&nbsp;React, Node.js, Twilio, Whisper, GPT-4
                             <span class="tooltiptext">Twilio for streaming, Whisper for ASR, GPT-4 for NLP,
                                 React/Node.js for the dashboard.</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Walmart Retail Strategic Analysis -->
-                <div class="project-card reveal-on-scroll" style="--delay: 300ms;"
-                    onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/WallmartProject_17695002859320/RetailWalkthrough', '_blank');">
-                    <div class="open-now">View Dashboard 📊</div>
-                    <div class="card-content">
-                        <!-- GitHub Link Placeholder - Optional, keeping standardized structure -->
-                        <!-- If there is a specific repo, replace the link below. Using generic repo tab for now or omit if preferred. -->
-                        <div class="github-btn-wrapper"
-                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409?tab=repositories', '_blank');"
-                            aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>
-                                <!-- Shopping Cart / Retail Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="9" cy="21" r="1"></circle>
-                                    <circle cx="20" cy="21" r="1"></circle>
-                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                                </svg>
-                                Walmart Retail Strategic Analysis
-                            </h3>
-                            <p class="project-impact">Uncovered $105M revenue anomaly and identified 35x higher spend in
-                                Card users.</p>
-                            <div class="project-details">
-                                <p><b>Situation:</b> Investigated significant "value leakage" in regional stores where high
-                                    transactional volume masked low profitability.</p>
-                                <p><b>Task:</b> Diagnosis of efficient vs. inefficient sales drivers underlying the value
-                                    leakage.</p>
-                                <p><b>Action:</b> Engineered a high-performance ETL pipeline using Power Query and
-                                    VertiPaq to process millions of rows (reducing memory by 95%) and conducted
-                                    hypothesis-driven analysis.</p>
-                                <p><b>Result:</b> Revealed a "Wholesale Anomaly" where ~9,100 B2B buyers generated $105M
-                                    revenue. Recommended shifting to a "B2B Supply Hub" model to reduce checkout
-                                    friction.</p>
-                            </div>
-                        </div>
-                        <div class="project-tools tooltip">
-                            <strong>Tools Used:</strong>&nbsp;Excel Power Pivot, DAX, Tableau
-                            <span class="tooltiptext">Used Power Query/VertiPaq for ETL on millions of rows, DAX for
-                                analysis, and Tableau for visualization.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 1 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 450ms;"
-                    onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/NL_Uber_17595641743240/Story2', '_blank');">
-                    <div class="open-now">View Analysis 📊</div>
-                    <div class="card-content">
-                        <div class="github-btn-wrapper"
-                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/uber-revenue-optimization', '_blank');"
-                            aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M19 17h2v-5h-4v-7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h5.64" />
-                                    <path d="M16 17l-1.5-1.5M19 14l1.5 1.5M14 17h5" />
-                                    <circle cx="7.5" cy="17.5" r="2.5" />
-                                    <circle cx="16.5" cy="17.5" r="2.5" />
-                                </svg>
-                                Uber Revenue Optimization Analysis
-                            </h3>
-                            <p class="project-impact">Increased revenue understanding on 10M+ trips, leading to 5
-                                strategic recommendations.</p>
-                            <div class="project-details">
-                                <p><b>Situation:</b> Uber needed to understand the key factors influencing profitability
-                                    across more than 10 million trips, but lacked clear insights from their raw trip
-                                    data.</p>
-                                <p><b>Task:</b> My goal was to analyze this large-scale dataset to identify the primary
-                                    drivers of "Revenue per Trip" and provide actionable recommendations to improve
-                                    profitability.</p>
-                                <p><b>Action:</b> I used Python and SQL to process, clean, and query the 10M+ trip
-                                    records. I then built interactive Tableau dashboards to visualize the relationship
-                                    between revenue and variables like trip type and payment method.</p>
-                                <p><b>Result:</b> The analysis successfully identified that airport trips and credit
-                                    card payments were key drivers, generating over 40% higher revenue. This led to 5
-                                    strategic recommendations for optimizing fare structures and payment promotions.</p>
-                            </div>
-                        </div>
-                        <div class="project-tools tooltip">
-                            <strong>Tools Used:</strong>&nbsp;Python, SQL, Tableau
-                            <span class="tooltiptext">Analyzed 10M+ trip records using Python and SQL; visualized trends
-                                via interactive Tableau dashboards.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 2 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 600ms;"
-                    onclick="window.open('https://public.tableau.com/app/profile/ansh.jain3373/viz/SwiggyDashboard_17529984933780/Story2', '_blank');">
-                    <div class="open-now">View Analysis 📊</div>
-                    <div class="card-content">
-                        <div class="github-btn-wrapper"
-                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/Tableau-Dashboard-for-Swiggy', '_blank');"
-                            aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M3 3v18h18" />
-                                    <path d="M18.7 8a6 6 0 0 0-8.4 0L4 18" />
-                                    <path d="M12 18h6" />
-                                </svg>
-                                Swiggy Web Traffic & Conversion Analysis
-                            </h3>
-                            <p class="project-impact">Built dashboards for 250K+ sessions, improving conversion
-                                efficiency by 25%.</p>
-                            <div class="project-details">
-                                <p><b>Situation:</b> Swiggy was observing user drop-off and friction across its web
-                                    platform, but needed to identify the exact bottlenecks within its 250,000+ user
-                                    sessions.</p>
-                                <p><b>Task:</b> I was tasked with analyzing the entire user journey to pinpoint key
-                                    friction points and develop strategies to improve conversion efficiency.</p>
-                                <p><b>Action:</b> I leveraged SQL to query and segment the 250,000+ user sessions. I
-                                    then engineered a set of interactive Tableau dashboards to visualize the complete
-                                    conversion funnel, from initial visit to final order.</p>
-                                <p><b>Result:</b> The dashboards clearly highlighted critical drop-off stages. My
-                                    analysis and subsequent recommendations directly contributed to a 25% improvement in
-                                    conversion efficiency.</p>
-                            </div>
-                        </div>
-                        <div class="project-tools tooltip">
-                            <strong>Tools Used:</strong>&nbsp;Tableau, SQL
-                            <span class="tooltiptext">Tableau was used for interactive dashboarding and SQL for querying
-                                the session data from the database.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- NEW PROJECT: Bumble -->
-                <div class="project-card reveal-on-scroll" style="--delay: 750ms;"
-                    onclick="window.open('https://drive.google.com/file/d/1Tas3RHrAW2QW6Brs4mk0C_5FiOzgpcUw/view?usp=sharing', '_blank');">
-                    <div class="open-now">View Analysis 📊</div>
-                    <div class="card-content">
-                        <div class="github-btn-wrapper"
-                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409?tab=repositories', '_blank');"
-                            aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>
-                                <!-- Users/Group Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                                Bumble: Strategic User Profiling & Analysis
-                            </h3>
-                            <p class="project-impact">Defined 4 key user personas and identified critical marketplace
-                                imbalances.</p>
-                            <div class="project-details">
-                                <p><b>Situation:</b> Bumble needed deeper insights into its diverse user base to improve
-                                    matchmaking and reduce churn, but raw data was noisy and unstructured.</p>
-                                <p><b>Task:</b> Conduct a strategic analysis to clean the data, identify key user
-                                    segments, and diagnose marketplace health issues like gender imbalances.</p>
-                                <p><b>Action:</b> I implemented robust cleaning (grouped median imputation, outlier
-                                    capping) and feature engineering (intent level, recency). I then used K-Means
-                                    clustering to define 4 distinct user personas and analyzed Male:Female ratios.</p>
-                                <p><b>Result:</b> The analysis revealed a significant male oversupply in key areas,
-                                    flagging churn risk. I defined 4 actionable personas ('Power Users', 'Casual
-                                    Browsers', etc.) to guide targeted product and marketing strategies.</p>
-                            </div>
-                        </div>
-                        <div class="project-tools tooltip">
-                            <strong>Tools Used:</strong>&nbsp;Python, Pandas, Scikit-learn, Matplotlib
-                            <span class="tooltiptext">Used Python for data cleaning and feature engineering,
-                                Scikit-learn for K-Means clustering, and Matplotlib/Seaborn for visualization.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 3 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 900ms;"
-                    onclick="window.open('https://drive.google.com/file/d/1NcM-XQuXPASHP3UBdLs78FytX2foOhue/view?usp=sharing', '_blank');">
-                    <div class="open-now">View Analysis 📊</div>
-                    <div class="card-content">
-                        <div class="github-btn-wrapper"
-                            onclick="event.stopPropagation(); window.open('https://github.com/anshjain1409/amazon-brazil-sql-analysis', '_blank');"
-                            aria-label="View on GitHub" role="button" tabindex="0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
-                                </path>
-                            </svg>
-                        </div>
-                        <div>
-                            <h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <circle cx="9" cy="21" r="1"></circle>
-                                    <circle cx="20" cy="21" r="1"></circle>
-                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                                </svg>
-                                Amazon Brazil Market Analysis for Indian Entry
-                            </h3>
-                            <p class="project-impact">Queried 1M+ transactions, recommending plays projected to lift
-                                sales by 18%.</p>
-                            <div class="project-details">
-                                <p><b>Situation:</b> An Indian seller needed a data-driven strategy to enter the
-                                    competitive Amazon Brazil market, requiring analysis of existing sales patterns to
-                                    find a profitable niche.</p>
-                                <p><b>Task:</b> My objective was to analyze over 1 million transactions to identify
-                                    high-demand, low-competition product categories and regions for a successful market
-                                    entry.</p>
-                                <p><b>Action:</b> I executed complex SQL queries on the 1M+ transaction dataset to model
-                                    sales velocity and regional demand. I used Tableau to visualize these market gaps,
-                                    comparing product popularity against seller saturation.</p>
-                                <p><b>Result:</b> I delivered a market entry strategy that identified specific niche
-                                    categories. This strategy was projected to lift the seller's initial sales by 18% by
-                                    avoiding overly saturated markets.</p>
-                            </div>
-                        </div>
-                        <div class="project-tools tooltip">
-                            <strong>Tools Used:</strong>&nbsp;MySQL, Tableau
-                            <span class="tooltiptext">MySQL was used to query over 1 million transaction records, and
-                                Tableau was used to visualize market trends and product opportunities.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 4 -->
+                <!-- 8. PROJECT: Flipkart -->
                 <div class="project-card reveal-on-scroll" style="--delay: 1050ms;"
                     onclick="window.open('https://drive.google.com/file/d/1s8UwKn1H7NJB0A85f7wT2Bmc9yjphutu/view?usp=sharing', '_blank');">
                     <div class="open-now">View Analysis 📊</div>
@@ -2012,19 +2043,17 @@
                                 Flipkart Customer Service Optimization
                             </h3>
                             <p class="project-impact">Performed RCA on 100K+ service tickets, projecting to raise CSAT
-                                by 15% and reduce complaints by 25%.</p>
+                                by 15%.</p>
                             <div class="project-details">
-                                <p><b>Situation:</b> Flipkart's customer service department was experiencing a high
-                                    volume of complaints, but the team lacked insight into the systemic root causes,
-                                    leading to repeat issues and lower CSAT scores.</p>
-                                <p><b>Task:</b> My goal was to conduct a comprehensive Root Cause Analysis (RCA) on
-                                    100,000+ service tickets to identify and cluster recurring problems.</p>
-                                <p><b>Action:</b> I used SQL and advanced Excel functions to query, filter, and segment
-                                    the 100K+ tickets. I grouped them by issue type and product category to pinpoint the
-                                    most frequent and severe systemic problems.</p>
-                                <p><b>Result:</b> The RCA uncovered several key operational gaps. I formulated
-                                    optimization recommendations that were projected to raise CSAT by 15% and reduce
-                                    overall complaint volume by 25%.</p>
+                                <p><b>Situation:</b> Customer dissatisfaction was rising despite stable ticket volumes,
+                                    indicating hidden SLA and quality failures.</p>
+                                <p><b>Task:</b> Conduct a comprehensive Root Cause Analysis (RCA) on 100,000+ service
+                                    tickets.</p>
+                                <p><b>Action:</b> Linked response time, sentiment, and query type using SQL and Excel.
+                                    Tested SLA adherence correlations across centers.</p>
+                                <p><b>Result:</b> Found that billing issues drove disproportionate dissatisfaction.
+                                    Recommended center-level SLA accountability, projecting a 15–20% CSAT improvement.
+                                </p>
                             </div>
                         </div>
                         <div class="project-tools tooltip">
@@ -2035,8 +2064,45 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 5 -->
+                <!-- 9. PROJECT: Marketing Insights -->
                 <div class="project-card reveal-on-scroll" style="--delay: 1200ms;"
+                    onclick="window.open('https://lookerstudio.google.com/reporting/75fe1078-d7b7-49bb-93e5-03aee302e41f', '_blank');">
+                    <div class="open-now">View Report 📊</div>
+                    <div class="card-content">
+                        <div>
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M3 3v18h18" />
+                                    <path d="M18.7 8a6 6 0 0 0-8.4 0L4 18" />
+                                    <path d="M12 18h6" />
+                                </svg>
+                                Marketing Insights Dashboard
+                            </h3>
+                            <p class="project-impact">Identified Email & Twitter as top ROI channels, enabling budget
+                                reallocation from underperformers.</p>
+                            <div class="project-details">
+                                <p><b>Situation:</b> Marketing spend allocation lacked ROI visibility across channels
+                                    and demographics.</p>
+                                <p><b>Task:</b> Develop an interactive dashboard to help leadership make data-driven
+                                    budget allocation decisions.</p>
+                                <p><b>Action:</b> Built an interactive dashboard in Looker Studio calculating CTR, CPC,
+                                    and ROI dynamically.</p>
+                                <p><b>Result:</b> Identified Email and Twitter as high-ROI channels. Found that female
+                                    users aged 18–24 showed the highest engagement efficiency.</p>
+                            </div>
+                        </div>
+                        <div class="project-tools tooltip">
+                            <strong>Tools Used:</strong>&nbsp;Excel, Looker, JavaScript
+                            <span class="tooltiptext">Used Excel for data processing and Looker (Looker Studio) for
+                                interactive dashboarding.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. PROJECT: Economic Sentiment -->
+                <div class="project-card reveal-on-scroll" style="--delay: 1350ms;"
                     onclick="window.open('https://drive.google.com/file/d/1RlvClUtbd3wKeJAl1CsGOwDPzhhcviYL/view?usp=sharing', '_blank');">
                     <div class="open-now">View Report 📊</div>
                     <div class="card-content">
@@ -2058,71 +2124,25 @@
                                     <line x1="18" y1="20" x2="18" y2="4"></line>
                                     <line x1="6" y1="20" x2="6" y2="16"></line>
                                 </svg>
-                                Sentiment Analysis of Economic Conditions
+                                Economic Sentiment Analysis
                             </h3>
                             <p class="project-impact">Built a pipeline to process 1,500+ financial headlines, providing
                                 early sentiment signals.</p>
                             <div class="project-details">
-                                <p><b>Situation:</b> Economic forecasting was hindered by a lack of real-time,
-                                    quantified market insight, forcing analysts to manually interpret thousands of
-                                    financial news headlines.</p>
-                                <p><b>Task:</b> I set out to engineer an end-to-end NLP pipeline to automate the
-                                    collection and sentiment analysis of financial news, providing early, quantified
+                                <p><b>Situation:</b> Macroeconomic sentiment is fragmented across unstructured news
+                                    sources, making it difficult to quantify confidence.</p>
+                                <p><b>Task:</b> Automate the collection and analysis of financial news to provide early
                                     economic signals.</p>
-                                <p><b>Action:</b> Using Python, I built a pipeline with BeautifulSoup/Selenium for
-                                    scraping 1,500+ headlines, NLTK and Vader for sentiment scoring, and
-                                    Pandas/Matplotlib for data handling and visualization.</p>
-                                <p><b>Result:</b> The system successfully automated the processing of financial
-                                    headlines, providing a live dashboard of quantified sentiment signals that could be
-                                    used for economic forecasting and risk assessment.</p>
+                                <p><b>Action:</b> Built an NLP pipeline with Python (Selenium, NLTK) using VADER
+                                    sentiment scoring and LDA topic modeling.</p>
+                                <p><b>Result:</b> Found that despite global headwinds, sentiment skewed 73% positive.
+                                    Recommended using sentiment indices as a leading indicator.</p>
                             </div>
                         </div>
                         <div class="project-tools tooltip">
-                            <strong>Tools Used:</strong>&nbsp;Python, NLTK, BeautifulSoup, Selenium, Pandas, Matplotlib
-                            <span class="tooltiptext">This project used a Python stack: BeautifulSoup/Selenium for web
-                                scraping, NLTK/Vader for sentiment analysis, and Pandas/Matplotlib for data handling and
-                                visualization.</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- PROJECT 6 -->
-                <div class="project-card reveal-on-scroll" style="--delay: 1350ms;"
-                    onclick="window.open('https://lookerstudio.google.com/reporting/75fe1078-d7b7-49bb-93e5-03aee302e41f', '_blank');">
-                    <div class="open-now">View Report 📊</div>
-                    <div class="card-content">
-                        <div>
-                            <h3>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M3 3v18h18" />
-                                    <path d="M18.7 8a6 6 0 0 0-8.4 0L4 18" />
-                                    <path d="M12 18h6" />
-                                </svg>
-                                Marketing Insights Dashboard
-                            </h3>
-                            <p class="project-impact">Identified Email & Twitter as top ROI channels, enabling budget
-                                reallocation from underperformers.</p>
-                            <div class="project-details">
-                                <p><b>Situation:</b> Marketing teams lacked a clear, unified view to track campaign
-                                    performance and audience behavior from raw data.</p>
-                                <p><b>Task:</b> Develop an interactive, web-based dashboard to help leadership make
-                                    faster, data-driven decisions on budget allocation and identify channel ROI.</p>
-                                <p><b>Action:</b> Built a responsive dashboard using <strong>Excel</strong> for data
-                                    preparation and <strong>Looker Studio</strong> for visualization. Implemented KPI
-                                    scorecards, interactive filters (date, channel, age), and responsive charts to
-                                    visualize performance.</p>
-                                <p><b>Result:</b> The dashboard successfully visualized key insights, identifying Email
-                                    and Twitter as high-ROI channels and Instagram/Facebook as high-cost
-                                    underperformers. It also revealed video ads were cost-effective and females 18-24
-                                    were a top segment.</p>
-                            </div>
-                        </div>
-                        <div class="project-tools tooltip">
-                            <strong>Tools Used:</strong>&nbsp;Excel, Looker
-                            <span class="tooltiptext">Used Excel for data processing and Looker (Looker Studio) for
-                                interactive dashboarding.</span>
+                            <strong>Tools Used:</strong>&nbsp;Python, NLTK, Selenium, Pandas
+                            <span class="tooltiptext">Used Python stack: Selenium for scraping, NLTK/VADER for sentiment
+                                analysis, and Pandas for data handling.</span>
                         </div>
                     </div>
                 </div>
@@ -2227,7 +2247,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://drive.google.com/file/d/1rNejoMJR6dda_MS-BZZfrYRkP8-q3hOe/view?usp=sharing"
+                    <a href="https://drive.google.com/file/d/1DJ_d2tPcHWfqg7kGPGiQJAhTIk3XLf_1/view?usp=drive_link"
                         target="_blank" rel="noopener noreferrer" aria-label="Resume">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                             <path
@@ -2276,9 +2296,11 @@
 
             function updateIcon(theme) {
                 if (theme === 'dark') {
-                    themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>`;
+                    // In Dark mode, show the Sun icon (to switch to light)
+                    themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>`;
                 } else {
-                    themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>`;
+                    // In Light mode, show the Moon icon (to switch to dark)
+                    themeToggle.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>`;
                 }
             }
 
@@ -2429,4 +2451,3 @@
 </body>
 
 </html>
-}
